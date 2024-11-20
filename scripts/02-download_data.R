@@ -1,26 +1,21 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
-# License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Purpose: Downloads and saves the data from Open Calgary: https://data.calgary.ca/Health-and-Safety/Community-Crime-Statistics/78gh-n26t/about_data
+# Author: Haobo Ren
+# Date: 11 November 2024
+# Contact: haobo.ren@mail.utoronto.ca
+# Pre-requisites: None
 
 
 #### Workspace setup ####
-library(opendatatoronto)
 library(tidyverse)
-# [...UPDATE THIS...]
 
-#### Download data ####
-# [...ADD CODE HERE TO DOWNLOAD...]
+#### Download and Save data ####
+# The website's API has a default limit of providing 1,000 rows.
+# So the raw data need to be downloaded manually from here: https://data.calgary.ca/Health-and-Safety/Community-Crime-Statistics/78gh-n26t/about_data
+# Click the Export button on the top-right corner, then select csv, and download.
+# The downloaded data was saved in data/01-raw_data/raw_data.csv
 
 
 
-#### Save data ####
-# [...UPDATE THIS...]
-# change the_raw_data to whatever name you assigned when you downloaded it.
-write_csv(the_raw_data, "inputs/data/raw_data.csv") 
 
          

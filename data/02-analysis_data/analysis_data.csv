@@ -1,20 +1,64 @@
-width,length,flying_time
-70,111,1.83
-57,127,2.32
-59,92,2.05
-70,75,1.1
-62,112,2.32
-68,103.5,0.5
-58,108,1.7
-79,114,0.86
-56,186,3.42
-87,68,1.37
-50,118,2.68
-49,186,1.83
-61,116,1.32
-60,127,1
-56,184,2.79
-69,124,1.4
-60,95,1.12
-44,137,1.28
-63,125,1.35
+category,year,crime_count
+Assault (Non-domestic),2018,3849
+Assault (Non-domestic),2019,3938
+Assault (Non-domestic),2020,3547
+Assault (Non-domestic),2021,4078
+Assault (Non-domestic),2022,4204
+Assault (Non-domestic),2023,4713
+Assault (Non-domestic),2024,3292
+Break & Enter - Commercial,2018,5082
+Break & Enter - Commercial,2019,5815
+Break & Enter - Commercial,2020,4240
+Break & Enter - Commercial,2021,3234
+Break & Enter - Commercial,2022,4310
+Break & Enter - Commercial,2023,3402
+Break & Enter - Commercial,2024,1992
+Break & Enter - Dwelling,2018,2693
+Break & Enter - Dwelling,2019,2403
+Break & Enter - Dwelling,2020,1688
+Break & Enter - Dwelling,2021,1586
+Break & Enter - Dwelling,2022,1596
+Break & Enter - Dwelling,2023,1520
+Break & Enter - Dwelling,2024,975
+Break & Enter - Other Premises,2018,2107
+Break & Enter - Other Premises,2019,2305
+Break & Enter - Other Premises,2020,2505
+Break & Enter - Other Premises,2021,1848
+Break & Enter - Other Premises,2022,1960
+Break & Enter - Other Premises,2023,1339
+Break & Enter - Other Premises,2024,783
+Commercial Robbery,2018,306
+Commercial Robbery,2019,384
+Commercial Robbery,2020,281
+Commercial Robbery,2021,361
+Commercial Robbery,2022,393
+Commercial Robbery,2023,317
+Commercial Robbery,2024,276
+Street Robbery,2018,659
+Street Robbery,2019,651
+Street Robbery,2020,526
+Street Robbery,2021,582
+Street Robbery,2022,559
+Street Robbery,2023,719
+Street Robbery,2024,474
+Theft FROM Vehicle,2018,12659
+Theft FROM Vehicle,2019,14770
+Theft FROM Vehicle,2020,12450
+Theft FROM Vehicle,2021,10230
+Theft FROM Vehicle,2022,12433
+Theft FROM Vehicle,2023,9245
+Theft FROM Vehicle,2024,4692
+Theft OF Vehicle,2018,6084
+Theft OF Vehicle,2019,6082
+Theft OF Vehicle,2020,4719
+Theft OF Vehicle,2021,4512
+Theft OF Vehicle,2022,5524
+Theft OF Vehicle,2023,4535
+Theft OF Vehicle,2024,3188
+Violence  'Other' (Non-domestic),2018,2019
+Violence  'Other' (Non-domestic),2019,1994
+Violence  'Other' (Non-domestic),2020,2032
+Violence  'Other' (Non-domestic),2021,2224
+Violence  'Other' (Non-domestic),2022,2138
+Violence  'Other' (Non-domestic),2023,2318
+Violence  'Other' (Non-domestic),2024,1610
