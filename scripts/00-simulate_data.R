@@ -1,52 +1,28 @@
 #### Preamble ####
-# Purpose: Simulates a dataset of Australian electoral divisions, including the 
-  #state and party that won each division.
-# Author: Rohan Alexander
-# Date: 26 September 2024
-# Contact: rohan.alexander@utoronto.ca
-# License: MIT
-# Pre-requisites: The `tidyverse` package must be installed
-# Any other information needed? Make sure you are in the `starter_folder` rproj
+# Purpose: Simulates a dataset of Calgary community crime count
+# Author: Haobo Ren
+# Date: 20 November 2024
+# Contact: haobo.ren@mail.utoronto.ca
+# Pre-requisites: The `tidyverse` and 'dplyr'  package must be installed
 
 
 #### Workspace setup ####
+library(dplyr)
 library(tidyverse)
-set.seed(853)
-
 
 #### Simulate data ####
-# State names
-states <- c(
-  "New South Wales",
-  "Victoria",
-  "Queensland",
-  "South Australia",
-  "Western Australia",
-  "Tasmania",
-  "Northern Territory",
-  "Australian Capital Territory"
+# Set seed for reproducibility
+set.seed(123)
+
+# Simulated data generation
+simulated_data <- data.frame(
+  Community = sample(c("01B", "02C", "03D", "04E"), size = 100, replace = TRUE),
+  Category = sample(c("Assault (Non-domestic)", "Break & Enter - Commercial", 
+                      "Break & Enter - Residential", "Theft", "Vandalism"), size = 100, replace = TRUE),
+  Crime.Count = sample(1:5, size = 100, replace = TRUE),
+  Year = sample(2019:2022, size = 100, replace = TRUE),
+  Month = sample(1:12, size = 100, replace = TRUE)
 )
-
-# Political parties
-parties <- c("Labor", "Liberal", "Greens", "National", "Other")
-
-# Create a dataset by randomly assigning states and parties to divisions
-analysis_data <- tibble(
-  division = paste("Division", 1:151),  # Add "Division" to make it a character
-  state = sample(
-    states,
-    size = 151,
-    replace = TRUE,
-    prob = c(0.25, 0.25, 0.15, 0.1, 0.1, 0.1, 0.025, 0.025) # Rough state population distribution
-  ),
-  party = sample(
-    parties,
-    size = 151,
-    replace = TRUE,
-    prob = c(0.40, 0.40, 0.05, 0.1, 0.05) # Rough party distribution
-  )
-)
-
 
 #### Save data ####
-write_csv(analysis_data, "data/00-simulated_data/simulated_data.csv")
+write_csv(simulated_data, "data/00-simulated_data/simulated_data.csv")

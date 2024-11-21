@@ -1,5 +1,6 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from Open Calgary: https://data.calgary.ca/Health-and-Safety/Community-Crime-Statistics/78gh-n26t/about_data
+# Purpose: Downloads and saves the data from Open Calgary:
+  # https://data.calgary.ca/Health-and-Safety/Community-Crime-Statistics/78gh-n26t/about_data
 # Author: Haobo Ren
 # Date: 11 November 2024
 # Contact: haobo.ren@mail.utoronto.ca
@@ -7,7 +8,7 @@
 
 
 #### Workspace setup ####
-library(tidyverse)
+
 
 #### Download and Save data ####
 # The website's API has a default limit of providing 1,000 rows.

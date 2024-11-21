@@ -1,152 +1,101 @@
-division,state,party
-Division 1,Victoria,Liberal
-Division 2,New South Wales,Liberal
-Division 3,Tasmania,Liberal
-Division 4,New South Wales,Liberal
-Division 5,Queensland,Liberal
-Division 6,New South Wales,Labor
-Division 7,Victoria,Liberal
-Division 8,Western Australia,Labor
-Division 9,Western Australia,Greens
-Division 10,Queensland,Labor
-Division 11,Queensland,Labor
-Division 12,Northern Territory,Liberal
-Division 13,New South Wales,Labor
-Division 14,Western Australia,Labor
-Division 15,Western Australia,National
-Division 16,Victoria,Liberal
-Division 17,South Australia,Liberal
-Division 18,Victoria,Liberal
-Division 19,Western Australia,Labor
-Division 20,South Australia,Labor
-Division 21,New South Wales,Liberal
-Division 22,Queensland,Greens
-Division 23,New South Wales,Liberal
-Division 24,New South Wales,Liberal
-Division 25,Queensland,Labor
-Division 26,Victoria,National
-Division 27,New South Wales,Liberal
-Division 28,Queensland,Liberal
-Division 29,Tasmania,Liberal
-Division 30,South Australia,Liberal
-Division 31,New South Wales,Liberal
-Division 32,Victoria,Labor
-Division 33,Tasmania,Liberal
-Division 34,New South Wales,Liberal
-Division 35,Western Australia,Labor
-Division 36,New South Wales,Liberal
-Division 37,Tasmania,Greens
-Division 38,Tasmania,Labor
-Division 39,Victoria,Greens
-Division 40,South Australia,Labor
-Division 41,New South Wales,Other
-Division 42,New South Wales,Other
-Division 43,Tasmania,Labor
-Division 44,Tasmania,National
-Division 45,Queensland,Liberal
-Division 46,Australian Capital Territory,Other
-Division 47,Queensland,Labor
-Division 48,Queensland,Other
-Division 49,South Australia,Liberal
-Division 50,Victoria,National
-Division 51,South Australia,Liberal
-Division 52,Victoria,Labor
-Division 53,South Australia,National
-Division 54,Queensland,Liberal
-Division 55,Queensland,Labor
-Division 56,South Australia,Liberal
-Division 57,New South Wales,Other
-Division 58,Northern Territory,Liberal
-Division 59,New South Wales,Labor
-Division 60,Western Australia,Labor
-Division 61,New South Wales,Liberal
-Division 62,South Australia,Liberal
-Division 63,Queensland,Labor
-Division 64,Tasmania,Labor
-Division 65,South Australia,Labor
-Division 66,Victoria,Labor
-Division 67,Queensland,Liberal
-Division 68,Queensland,Liberal
-Division 69,Tasmania,Labor
-Division 70,South Australia,National
-Division 71,Australian Capital Territory,Labor
-Division 72,Western Australia,Labor
-Division 73,Queensland,National
-Division 74,Victoria,Labor
-Division 75,Western Australia,Labor
-Division 76,Tasmania,Labor
-Division 77,Queensland,Liberal
-Division 78,Western Australia,Liberal
-Division 79,Queensland,Labor
-Division 80,Queensland,Liberal
-Division 81,Victoria,Labor
-Division 82,New South Wales,Liberal
-Division 83,Victoria,Liberal
-Division 84,Queensland,National
-Division 85,Western Australia,Liberal
-Division 86,New South Wales,Labor
-Division 87,Queensland,Liberal
-Division 88,New South Wales,Liberal
-Division 89,Tasmania,Liberal
-Division 90,South Australia,Labor
-Division 91,Victoria,Liberal
-Division 92,New South Wales,Labor
-Division 93,Tasmania,Labor
-Division 94,South Australia,Labor
-Division 95,Victoria,Liberal
-Division 96,Victoria,Labor
-Division 97,Western Australia,Liberal
-Division 98,Queensland,Liberal
-Division 99,South Australia,Liberal
-Division 100,New South Wales,Labor
-Division 101,South Australia,Labor
-Division 102,New South Wales,Labor
-Division 103,Victoria,Labor
-Division 104,Victoria,Labor
-Division 105,South Australia,Other
-Division 106,Western Australia,Labor
-Division 107,Tasmania,Liberal
-Division 108,Victoria,Labor
-Division 109,Queensland,Liberal
-Division 110,Victoria,Labor
-Division 111,Australian Capital Territory,Labor
-Division 112,Victoria,Liberal
-Division 113,Victoria,Liberal
-Division 114,Victoria,Liberal
-Division 115,Tasmania,Labor
-Division 116,Victoria,Labor
-Division 117,New South Wales,Labor
-Division 118,Victoria,Labor
-Division 119,Victoria,Greens
-Division 120,Northern Territory,Labor
-Division 121,South Australia,Liberal
-Division 122,New South Wales,Liberal
-Division 123,New South Wales,Labor
-Division 124,New South Wales,Liberal
-Division 125,New South Wales,National
-Division 126,New South Wales,Labor
-Division 127,Queensland,Labor
-Division 128,New South Wales,Other
-Division 129,Queensland,Labor
-Division 130,Australian Capital Territory,Liberal
-Division 131,Tasmania,Greens
-Division 132,New South Wales,National
-Division 133,New South Wales,Labor
-Division 134,Northern Territory,Labor
-Division 135,South Australia,National
-Division 136,Victoria,Labor
-Division 137,Tasmania,National
-Division 138,South Australia,Liberal
-Division 139,New South Wales,Labor
-Division 140,Victoria,Other
-Division 141,Queensland,Greens
-Division 142,Victoria,National
-Division 143,Western Australia,Labor
-Division 144,Victoria,Labor
-Division 145,Queensland,Liberal
-Division 146,Tasmania,Liberal
-Division 147,South Australia,Liberal
-Division 148,Victoria,Labor
-Division 149,New South Wales,National
-Division 150,New South Wales,Labor
-Division 151,Victoria,Liberal
+Community,Category,Crime.Count,Year,Month
+03D,Assault (Non-domestic),4,2021,2
+03D,Theft,2,2019,1
+03D,Assault (Non-domestic),1,2021,4
+02C,Assault (Non-domestic),2,2022,11
+03D,Break & Enter - Residential,4,2020,9
+02C,Theft,5,2019,5
+02C,Assault (Non-domestic),1,2019,11
+02C,Break & Enter - Residential,1,2021,12
+03D,Vandalism,1,2022,8
+01B,Break & Enter - Residential,5,2020,2
+04E,Break & Enter - Commercial,3,2021,5
+02C,Vandalism,1,2020,2
+02C,Vandalism,2,2019,6
+01B,Break & Enter - Residential,2,2020,10
+02C,Break & Enter - Commercial,1,2021,10
+03D,Break & Enter - Commercial,2,2020,9
+04E,Break & Enter - Commercial,1,2021,11
+01B,Theft,5,2021,7
+03D,Break & Enter - Commercial,2,2019,6
+03D,Break & Enter - Commercial,3,2020,12
+01B,Theft,5,2022,3
+04E,Theft,4,2019,11
+01B,Assault (Non-domestic),5,2020,8
+01B,Break & Enter - Residential,2,2020,11
+01B,Break & Enter - Residential,1,2022,7
+03D,Assault (Non-domestic),4,2020,4
+04E,Break & Enter - Residential,2,2022,8
+02C,Vandalism,5,2020,12
+03D,Break & Enter - Commercial,1,2019,3
+02C,Break & Enter - Residential,5,2022,8
+01B,Break & Enter - Commercial,1,2020,6
+02C,Vandalism,4,2022,4
+03D,Vandalism,3,2019,7
+04E,Break & Enter - Residential,1,2022,10
+02C,Theft,1,2020,11
+01B,Theft,2,2019,8
+03D,Theft,4,2022,4
+03D,Vandalism,2,2022,10
+01B,Break & Enter - Residential,1,2021,9
+04E,Assault (Non-domestic),5,2020,6
+03D,Break & Enter - Commercial,5,2019,3
+04E,Assault (Non-domestic),1,2021,4
+02C,Break & Enter - Commercial,1,2020,9
+01B,Vandalism,5,2022,9
+03D,Break & Enter - Residential,5,2021,4
+01B,Theft,2,2020,4
+01B,Theft,2,2021,6
+02C,Assault (Non-domestic),5,2021,5
+03D,Theft,1,2019,1
+03D,Assault (Non-domestic),1,2022,8
+04E,Break & Enter - Residential,5,2020,7
+01B,Theft,5,2021,12
+03D,Break & Enter - Residential,4,2019,5
+01B,Vandalism,5,2019,6
+03D,Theft,5,2021,3
+04E,Theft,4,2020,8
+02C,Theft,2,2021,10
+01B,Assault (Non-domestic),5,2020,5
+02C,Break & Enter - Commercial,1,2020,7
+01B,Break & Enter - Residential,1,2020,4
+01B,Theft,2,2022,12
+04E,Break & Enter - Residential,1,2019,9
+04E,Assault (Non-domestic),2,2022,11
+03D,Vandalism,5,2020,11
+01B,Vandalism,1,2019,3
+02C,Break & Enter - Commercial,3,2022,10
+01B,Break & Enter - Residential,2,2022,7
+01B,Vandalism,2,2019,2
+03D,Assault (Non-domestic),5,2022,9
+01B,Theft,4,2019,6
+02C,Break & Enter - Commercial,1,2022,4
+01B,Theft,5,2020,6
+03D,Vandalism,2,2020,2
+01B,Vandalism,5,2022,2
+03D,Vandalism,2,2021,8
+02C,Vandalism,2,2021,8
+04E,Assault (Non-domestic),4,2019,11
+03D,Break & Enter - Commercial,3,2020,5
+04E,Assault (Non-domestic),4,2022,9
+04E,Break & Enter - Commercial,3,2022,7
+02C,Vandalism,3,2020,3
+02C,Vandalism,3,2021,7
+03D,Assault (Non-domestic),5,2021,8
+04E,Break & Enter - Commercial,3,2021,11
+02C,Vandalism,2,2021,10
+02C,Theft,3,2020,5
+03D,Break & Enter - Commercial,1,2019,1
+03D,Break & Enter - Commercial,5,2022,7
+04E,Break & Enter - Residential,1,2019,6
+01B,Assault (Non-domestic),4,2022,8
+02C,Assault (Non-domestic),2,2021,4
+02C,Vandalism,2,2022,6
+01B,Vandalism,4,2022,12
+02C,Break & Enter - Residential,1,2022,1
+04E,Break & Enter - Commercial,4,2019,3
+01B,Vandalism,5,2020,12
+01B,Vandalism,5,2020,4
+02C,Break & Enter - Residential,3,2022,1
+03D,Break & Enter - Residential,5,2022,5
+03D,Assault (Non-domestic),5,2021,11

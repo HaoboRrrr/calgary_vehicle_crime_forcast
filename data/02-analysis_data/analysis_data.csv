@@ -1,64 +1,735 @@
-category,year,crime_count
-Assault (Non-domestic),2018,3849
-Assault (Non-domestic),2019,3938
-Assault (Non-domestic),2020,3547
-Assault (Non-domestic),2021,4078
-Assault (Non-domestic),2022,4204
-Assault (Non-domestic),2023,4713
-Assault (Non-domestic),2024,3292
-Break & Enter - Commercial,2018,5082
-Break & Enter - Commercial,2019,5815
-Break & Enter - Commercial,2020,4240
-Break & Enter - Commercial,2021,3234
-Break & Enter - Commercial,2022,4310
-Break & Enter - Commercial,2023,3402
-Break & Enter - Commercial,2024,1992
-Break & Enter - Dwelling,2018,2693
-Break & Enter - Dwelling,2019,2403
-Break & Enter - Dwelling,2020,1688
-Break & Enter - Dwelling,2021,1586
-Break & Enter - Dwelling,2022,1596
-Break & Enter - Dwelling,2023,1520
-Break & Enter - Dwelling,2024,975
-Break & Enter - Other Premises,2018,2107
-Break & Enter - Other Premises,2019,2305
-Break & Enter - Other Premises,2020,2505
-Break & Enter - Other Premises,2021,1848
-Break & Enter - Other Premises,2022,1960
-Break & Enter - Other Premises,2023,1339
-Break & Enter - Other Premises,2024,783
-Commercial Robbery,2018,306
-Commercial Robbery,2019,384
-Commercial Robbery,2020,281
-Commercial Robbery,2021,361
-Commercial Robbery,2022,393
-Commercial Robbery,2023,317
-Commercial Robbery,2024,276
-Street Robbery,2018,659
-Street Robbery,2019,651
-Street Robbery,2020,526
-Street Robbery,2021,582
-Street Robbery,2022,559
-Street Robbery,2023,719
-Street Robbery,2024,474
-Theft FROM Vehicle,2018,12659
-Theft FROM Vehicle,2019,14770
-Theft FROM Vehicle,2020,12450
-Theft FROM Vehicle,2021,10230
-Theft FROM Vehicle,2022,12433
-Theft FROM Vehicle,2023,9245
-Theft FROM Vehicle,2024,4692
-Theft OF Vehicle,2018,6084
-Theft OF Vehicle,2019,6082
-Theft OF Vehicle,2020,4719
-Theft OF Vehicle,2021,4512
-Theft OF Vehicle,2022,5524
-Theft OF Vehicle,2023,4535
-Theft OF Vehicle,2024,3188
-Violence  'Other' (Non-domestic),2018,2019
-Violence  'Other' (Non-domestic),2019,1994
-Violence  'Other' (Non-domestic),2020,2032
-Violence  'Other' (Non-domestic),2021,2224
-Violence  'Other' (Non-domestic),2022,2138
-Violence  'Other' (Non-domestic),2023,2318
-Violence  'Other' (Non-domestic),2024,1610
+category,crime_count,time
+Assault (Non-domestic),256,Jan 2018
+Assault (Non-domestic),262,Feb 2018
+Assault (Non-domestic),293,Mar 2018
+Assault (Non-domestic),294,Apr 2018
+Assault (Non-domestic),403,May 2018
+Assault (Non-domestic),379,Jun 2018
+Assault (Non-domestic),331,Jul 2018
+Assault (Non-domestic),351,Aug 2018
+Assault (Non-domestic),299,Sep 2018
+Assault (Non-domestic),341,Oct 2018
+Assault (Non-domestic),313,Nov 2018
+Assault (Non-domestic),327,Dec 2018
+Assault (Non-domestic),346,Jan 2019
+Assault (Non-domestic),251,Feb 2019
+Assault (Non-domestic),320,Mar 2019
+Assault (Non-domestic),311,Apr 2019
+Assault (Non-domestic),332,May 2019
+Assault (Non-domestic),350,Jun 2019
+Assault (Non-domestic),382,Jul 2019
+Assault (Non-domestic),333,Aug 2019
+Assault (Non-domestic),330,Sep 2019
+Assault (Non-domestic),365,Oct 2019
+Assault (Non-domestic),317,Nov 2019
+Assault (Non-domestic),301,Dec 2019
+Assault (Non-domestic),279,Jan 2020
+Assault (Non-domestic),333,Feb 2020
+Assault (Non-domestic),248,Mar 2020
+Assault (Non-domestic),222,Apr 2020
+Assault (Non-domestic),229,May 2020
+Assault (Non-domestic),336,Jun 2020
+Assault (Non-domestic),392,Jul 2020
+Assault (Non-domestic),376,Aug 2020
+Assault (Non-domestic),352,Sep 2020
+Assault (Non-domestic),291,Oct 2020
+Assault (Non-domestic),252,Nov 2020
+Assault (Non-domestic),237,Dec 2020
+Assault (Non-domestic),279,Jan 2021
+Assault (Non-domestic),244,Feb 2021
+Assault (Non-domestic),292,Mar 2021
+Assault (Non-domestic),294,Apr 2021
+Assault (Non-domestic),312,May 2021
+Assault (Non-domestic),396,Jun 2021
+Assault (Non-domestic),391,Jul 2021
+Assault (Non-domestic),400,Aug 2021
+Assault (Non-domestic),394,Sep 2021
+Assault (Non-domestic),376,Oct 2021
+Assault (Non-domestic),397,Nov 2021
+Assault (Non-domestic),303,Dec 2021
+Assault (Non-domestic),327,Jan 2022
+Assault (Non-domestic),314,Feb 2022
+Assault (Non-domestic),374,Mar 2022
+Assault (Non-domestic),319,Apr 2022
+Assault (Non-domestic),372,May 2022
+Assault (Non-domestic),397,Jun 2022
+Assault (Non-domestic),386,Jul 2022
+Assault (Non-domestic),385,Aug 2022
+Assault (Non-domestic),354,Sep 2022
+Assault (Non-domestic),373,Oct 2022
+Assault (Non-domestic),303,Nov 2022
+Assault (Non-domestic),300,Dec 2022
+Assault (Non-domestic),304,Jan 2023
+Assault (Non-domestic),331,Feb 2023
+Assault (Non-domestic),392,Mar 2023
+Assault (Non-domestic),386,Apr 2023
+Assault (Non-domestic),443,May 2023
+Assault (Non-domestic),459,Jun 2023
+Assault (Non-domestic),430,Jul 2023
+Assault (Non-domestic),444,Aug 2023
+Assault (Non-domestic),400,Sep 2023
+Assault (Non-domestic),373,Oct 2023
+Assault (Non-domestic),377,Nov 2023
+Assault (Non-domestic),374,Dec 2023
+Assault (Non-domestic),281,Jan 2024
+Assault (Non-domestic),268,Feb 2024
+Assault (Non-domestic),362,Mar 2024
+Assault (Non-domestic),349,Apr 2024
+Assault (Non-domestic),422,May 2024
+Assault (Non-domestic),416,Jun 2024
+Assault (Non-domestic),428,Jul 2024
+Assault (Non-domestic),371,Aug 2024
+Assault (Non-domestic),395,Sep 2024
+Break & Enter - Commercial,393,Jan 2018
+Break & Enter - Commercial,313,Feb 2018
+Break & Enter - Commercial,412,Mar 2018
+Break & Enter - Commercial,386,Apr 2018
+Break & Enter - Commercial,451,May 2018
+Break & Enter - Commercial,368,Jun 2018
+Break & Enter - Commercial,494,Jul 2018
+Break & Enter - Commercial,550,Aug 2018
+Break & Enter - Commercial,443,Sep 2018
+Break & Enter - Commercial,413,Oct 2018
+Break & Enter - Commercial,393,Nov 2018
+Break & Enter - Commercial,466,Dec 2018
+Break & Enter - Commercial,540,Jan 2019
+Break & Enter - Commercial,420,Feb 2019
+Break & Enter - Commercial,470,Mar 2019
+Break & Enter - Commercial,427,Apr 2019
+Break & Enter - Commercial,475,May 2019
+Break & Enter - Commercial,498,Jun 2019
+Break & Enter - Commercial,463,Jul 2019
+Break & Enter - Commercial,557,Aug 2019
+Break & Enter - Commercial,642,Sep 2019
+Break & Enter - Commercial,519,Oct 2019
+Break & Enter - Commercial,425,Nov 2019
+Break & Enter - Commercial,379,Dec 2019
+Break & Enter - Commercial,394,Jan 2020
+Break & Enter - Commercial,446,Feb 2020
+Break & Enter - Commercial,509,Mar 2020
+Break & Enter - Commercial,403,Apr 2020
+Break & Enter - Commercial,266,May 2020
+Break & Enter - Commercial,293,Jun 2020
+Break & Enter - Commercial,314,Jul 2020
+Break & Enter - Commercial,372,Aug 2020
+Break & Enter - Commercial,324,Sep 2020
+Break & Enter - Commercial,331,Oct 2020
+Break & Enter - Commercial,280,Nov 2020
+Break & Enter - Commercial,308,Dec 2020
+Break & Enter - Commercial,292,Jan 2021
+Break & Enter - Commercial,238,Feb 2021
+Break & Enter - Commercial,258,Mar 2021
+Break & Enter - Commercial,272,Apr 2021
+Break & Enter - Commercial,263,May 2021
+Break & Enter - Commercial,190,Jun 2021
+Break & Enter - Commercial,287,Jul 2021
+Break & Enter - Commercial,288,Aug 2021
+Break & Enter - Commercial,303,Sep 2021
+Break & Enter - Commercial,286,Oct 2021
+Break & Enter - Commercial,255,Nov 2021
+Break & Enter - Commercial,302,Dec 2021
+Break & Enter - Commercial,416,Jan 2022
+Break & Enter - Commercial,403,Feb 2022
+Break & Enter - Commercial,489,Mar 2022
+Break & Enter - Commercial,383,Apr 2022
+Break & Enter - Commercial,367,May 2022
+Break & Enter - Commercial,383,Jun 2022
+Break & Enter - Commercial,301,Jul 2022
+Break & Enter - Commercial,358,Aug 2022
+Break & Enter - Commercial,311,Sep 2022
+Break & Enter - Commercial,304,Oct 2022
+Break & Enter - Commercial,269,Nov 2022
+Break & Enter - Commercial,326,Dec 2022
+Break & Enter - Commercial,350,Jan 2023
+Break & Enter - Commercial,248,Feb 2023
+Break & Enter - Commercial,370,Mar 2023
+Break & Enter - Commercial,275,Apr 2023
+Break & Enter - Commercial,266,May 2023
+Break & Enter - Commercial,268,Jun 2023
+Break & Enter - Commercial,263,Jul 2023
+Break & Enter - Commercial,285,Aug 2023
+Break & Enter - Commercial,264,Sep 2023
+Break & Enter - Commercial,282,Oct 2023
+Break & Enter - Commercial,309,Nov 2023
+Break & Enter - Commercial,222,Dec 2023
+Break & Enter - Commercial,204,Jan 2024
+Break & Enter - Commercial,175,Feb 2024
+Break & Enter - Commercial,222,Mar 2024
+Break & Enter - Commercial,186,Apr 2024
+Break & Enter - Commercial,196,May 2024
+Break & Enter - Commercial,205,Jun 2024
+Break & Enter - Commercial,206,Jul 2024
+Break & Enter - Commercial,280,Aug 2024
+Break & Enter - Commercial,241,Sep 2024
+Break & Enter - Commercial,77,Oct 2024
+Break & Enter - Dwelling,216,Jan 2018
+Break & Enter - Dwelling,186,Feb 2018
+Break & Enter - Dwelling,210,Mar 2018
+Break & Enter - Dwelling,177,Apr 2018
+Break & Enter - Dwelling,201,May 2018
+Break & Enter - Dwelling,249,Jun 2018
+Break & Enter - Dwelling,266,Jul 2018
+Break & Enter - Dwelling,295,Aug 2018
+Break & Enter - Dwelling,240,Sep 2018
+Break & Enter - Dwelling,265,Oct 2018
+Break & Enter - Dwelling,188,Nov 2018
+Break & Enter - Dwelling,200,Dec 2018
+Break & Enter - Dwelling,178,Jan 2019
+Break & Enter - Dwelling,128,Feb 2019
+Break & Enter - Dwelling,163,Mar 2019
+Break & Enter - Dwelling,152,Apr 2019
+Break & Enter - Dwelling,172,May 2019
+Break & Enter - Dwelling,259,Jun 2019
+Break & Enter - Dwelling,278,Jul 2019
+Break & Enter - Dwelling,249,Aug 2019
+Break & Enter - Dwelling,277,Sep 2019
+Break & Enter - Dwelling,193,Oct 2019
+Break & Enter - Dwelling,168,Nov 2019
+Break & Enter - Dwelling,186,Dec 2019
+Break & Enter - Dwelling,159,Jan 2020
+Break & Enter - Dwelling,168,Feb 2020
+Break & Enter - Dwelling,142,Mar 2020
+Break & Enter - Dwelling,107,Apr 2020
+Break & Enter - Dwelling,109,May 2020
+Break & Enter - Dwelling,120,Jun 2020
+Break & Enter - Dwelling,136,Jul 2020
+Break & Enter - Dwelling,207,Aug 2020
+Break & Enter - Dwelling,158,Sep 2020
+Break & Enter - Dwelling,152,Oct 2020
+Break & Enter - Dwelling,118,Nov 2020
+Break & Enter - Dwelling,112,Dec 2020
+Break & Enter - Dwelling,106,Jan 2021
+Break & Enter - Dwelling,83,Feb 2021
+Break & Enter - Dwelling,87,Mar 2021
+Break & Enter - Dwelling,105,Apr 2021
+Break & Enter - Dwelling,104,May 2021
+Break & Enter - Dwelling,133,Jun 2021
+Break & Enter - Dwelling,172,Jul 2021
+Break & Enter - Dwelling,198,Aug 2021
+Break & Enter - Dwelling,144,Sep 2021
+Break & Enter - Dwelling,151,Oct 2021
+Break & Enter - Dwelling,163,Nov 2021
+Break & Enter - Dwelling,140,Dec 2021
+Break & Enter - Dwelling,144,Jan 2022
+Break & Enter - Dwelling,113,Feb 2022
+Break & Enter - Dwelling,161,Mar 2022
+Break & Enter - Dwelling,110,Apr 2022
+Break & Enter - Dwelling,145,May 2022
+Break & Enter - Dwelling,158,Jun 2022
+Break & Enter - Dwelling,145,Jul 2022
+Break & Enter - Dwelling,136,Aug 2022
+Break & Enter - Dwelling,136,Sep 2022
+Break & Enter - Dwelling,143,Oct 2022
+Break & Enter - Dwelling,84,Nov 2022
+Break & Enter - Dwelling,121,Dec 2022
+Break & Enter - Dwelling,139,Jan 2023
+Break & Enter - Dwelling,87,Feb 2023
+Break & Enter - Dwelling,127,Mar 2023
+Break & Enter - Dwelling,133,Apr 2023
+Break & Enter - Dwelling,127,May 2023
+Break & Enter - Dwelling,146,Jun 2023
+Break & Enter - Dwelling,130,Jul 2023
+Break & Enter - Dwelling,142,Aug 2023
+Break & Enter - Dwelling,134,Sep 2023
+Break & Enter - Dwelling,106,Oct 2023
+Break & Enter - Dwelling,110,Nov 2023
+Break & Enter - Dwelling,139,Dec 2023
+Break & Enter - Dwelling,94,Jan 2024
+Break & Enter - Dwelling,81,Feb 2024
+Break & Enter - Dwelling,75,Mar 2024
+Break & Enter - Dwelling,91,Apr 2024
+Break & Enter - Dwelling,107,May 2024
+Break & Enter - Dwelling,107,Jun 2024
+Break & Enter - Dwelling,111,Jul 2024
+Break & Enter - Dwelling,136,Aug 2024
+Break & Enter - Dwelling,124,Sep 2024
+Break & Enter - Dwelling,49,Oct 2024
+Break & Enter - Other Premises,134,Jan 2018
+Break & Enter - Other Premises,115,Feb 2018
+Break & Enter - Other Premises,107,Mar 2018
+Break & Enter - Other Premises,185,Apr 2018
+Break & Enter - Other Premises,213,May 2018
+Break & Enter - Other Premises,222,Jun 2018
+Break & Enter - Other Premises,215,Jul 2018
+Break & Enter - Other Premises,198,Aug 2018
+Break & Enter - Other Premises,213,Sep 2018
+Break & Enter - Other Premises,191,Oct 2018
+Break & Enter - Other Premises,167,Nov 2018
+Break & Enter - Other Premises,147,Dec 2018
+Break & Enter - Other Premises,175,Jan 2019
+Break & Enter - Other Premises,142,Feb 2019
+Break & Enter - Other Premises,168,Mar 2019
+Break & Enter - Other Premises,192,Apr 2019
+Break & Enter - Other Premises,202,May 2019
+Break & Enter - Other Premises,215,Jun 2019
+Break & Enter - Other Premises,219,Jul 2019
+Break & Enter - Other Premises,259,Aug 2019
+Break & Enter - Other Premises,215,Sep 2019
+Break & Enter - Other Premises,190,Oct 2019
+Break & Enter - Other Premises,158,Nov 2019
+Break & Enter - Other Premises,170,Dec 2019
+Break & Enter - Other Premises,179,Jan 2020
+Break & Enter - Other Premises,180,Feb 2020
+Break & Enter - Other Premises,179,Mar 2020
+Break & Enter - Other Premises,203,Apr 2020
+Break & Enter - Other Premises,147,May 2020
+Break & Enter - Other Premises,223,Jun 2020
+Break & Enter - Other Premises,218,Jul 2020
+Break & Enter - Other Premises,301,Aug 2020
+Break & Enter - Other Premises,300,Sep 2020
+Break & Enter - Other Premises,221,Oct 2020
+Break & Enter - Other Premises,200,Nov 2020
+Break & Enter - Other Premises,154,Dec 2020
+Break & Enter - Other Premises,155,Jan 2021
+Break & Enter - Other Premises,87,Feb 2021
+Break & Enter - Other Premises,133,Mar 2021
+Break & Enter - Other Premises,134,Apr 2021
+Break & Enter - Other Premises,135,May 2021
+Break & Enter - Other Premises,160,Jun 2021
+Break & Enter - Other Premises,175,Jul 2021
+Break & Enter - Other Premises,179,Aug 2021
+Break & Enter - Other Premises,193,Sep 2021
+Break & Enter - Other Premises,177,Oct 2021
+Break & Enter - Other Premises,172,Nov 2021
+Break & Enter - Other Premises,148,Dec 2021
+Break & Enter - Other Premises,171,Jan 2022
+Break & Enter - Other Premises,159,Feb 2022
+Break & Enter - Other Premises,200,Mar 2022
+Break & Enter - Other Premises,204,Apr 2022
+Break & Enter - Other Premises,201,May 2022
+Break & Enter - Other Premises,189,Jun 2022
+Break & Enter - Other Premises,151,Jul 2022
+Break & Enter - Other Premises,156,Aug 2022
+Break & Enter - Other Premises,153,Sep 2022
+Break & Enter - Other Premises,146,Oct 2022
+Break & Enter - Other Premises,113,Nov 2022
+Break & Enter - Other Premises,117,Dec 2022
+Break & Enter - Other Premises,97,Jan 2023
+Break & Enter - Other Premises,73,Feb 2023
+Break & Enter - Other Premises,75,Mar 2023
+Break & Enter - Other Premises,114,Apr 2023
+Break & Enter - Other Premises,123,May 2023
+Break & Enter - Other Premises,128,Jun 2023
+Break & Enter - Other Premises,137,Jul 2023
+Break & Enter - Other Premises,165,Aug 2023
+Break & Enter - Other Premises,100,Sep 2023
+Break & Enter - Other Premises,97,Oct 2023
+Break & Enter - Other Premises,127,Nov 2023
+Break & Enter - Other Premises,103,Dec 2023
+Break & Enter - Other Premises,64,Jan 2024
+Break & Enter - Other Premises,50,Feb 2024
+Break & Enter - Other Premises,64,Mar 2024
+Break & Enter - Other Premises,72,Apr 2024
+Break & Enter - Other Premises,86,May 2024
+Break & Enter - Other Premises,106,Jun 2024
+Break & Enter - Other Premises,102,Jul 2024
+Break & Enter - Other Premises,102,Aug 2024
+Break & Enter - Other Premises,117,Sep 2024
+Break & Enter - Other Premises,20,Oct 2024
+Commercial Robbery,25,Jan 2018
+Commercial Robbery,24,Feb 2018
+Commercial Robbery,22,Mar 2018
+Commercial Robbery,21,Apr 2018
+Commercial Robbery,33,May 2018
+Commercial Robbery,32,Jun 2018
+Commercial Robbery,25,Jul 2018
+Commercial Robbery,22,Aug 2018
+Commercial Robbery,24,Sep 2018
+Commercial Robbery,26,Oct 2018
+Commercial Robbery,33,Nov 2018
+Commercial Robbery,19,Dec 2018
+Commercial Robbery,24,Jan 2019
+Commercial Robbery,32,Feb 2019
+Commercial Robbery,24,Mar 2019
+Commercial Robbery,20,Apr 2019
+Commercial Robbery,21,May 2019
+Commercial Robbery,28,Jun 2019
+Commercial Robbery,32,Jul 2019
+Commercial Robbery,21,Aug 2019
+Commercial Robbery,34,Sep 2019
+Commercial Robbery,43,Oct 2019
+Commercial Robbery,52,Nov 2019
+Commercial Robbery,53,Dec 2019
+Commercial Robbery,31,Jan 2020
+Commercial Robbery,32,Feb 2020
+Commercial Robbery,31,Mar 2020
+Commercial Robbery,13,Apr 2020
+Commercial Robbery,10,May 2020
+Commercial Robbery,12,Jun 2020
+Commercial Robbery,11,Jul 2020
+Commercial Robbery,27,Aug 2020
+Commercial Robbery,35,Sep 2020
+Commercial Robbery,19,Oct 2020
+Commercial Robbery,30,Nov 2020
+Commercial Robbery,30,Dec 2020
+Commercial Robbery,35,Jan 2021
+Commercial Robbery,30,Feb 2021
+Commercial Robbery,25,Mar 2021
+Commercial Robbery,19,Apr 2021
+Commercial Robbery,18,May 2021
+Commercial Robbery,29,Jun 2021
+Commercial Robbery,25,Jul 2021
+Commercial Robbery,39,Aug 2021
+Commercial Robbery,25,Sep 2021
+Commercial Robbery,34,Oct 2021
+Commercial Robbery,33,Nov 2021
+Commercial Robbery,49,Dec 2021
+Commercial Robbery,46,Jan 2022
+Commercial Robbery,43,Feb 2022
+Commercial Robbery,52,Mar 2022
+Commercial Robbery,34,Apr 2022
+Commercial Robbery,25,May 2022
+Commercial Robbery,42,Jun 2022
+Commercial Robbery,19,Jul 2022
+Commercial Robbery,22,Aug 2022
+Commercial Robbery,34,Sep 2022
+Commercial Robbery,36,Oct 2022
+Commercial Robbery,22,Nov 2022
+Commercial Robbery,18,Dec 2022
+Commercial Robbery,23,Jan 2023
+Commercial Robbery,21,Feb 2023
+Commercial Robbery,28,Mar 2023
+Commercial Robbery,19,Apr 2023
+Commercial Robbery,22,May 2023
+Commercial Robbery,32,Jun 2023
+Commercial Robbery,23,Jul 2023
+Commercial Robbery,23,Aug 2023
+Commercial Robbery,18,Sep 2023
+Commercial Robbery,26,Oct 2023
+Commercial Robbery,43,Nov 2023
+Commercial Robbery,39,Dec 2023
+Commercial Robbery,24,Jan 2024
+Commercial Robbery,27,Feb 2024
+Commercial Robbery,25,Mar 2024
+Commercial Robbery,27,Apr 2024
+Commercial Robbery,29,May 2024
+Commercial Robbery,33,Jun 2024
+Commercial Robbery,29,Jul 2024
+Commercial Robbery,31,Aug 2024
+Commercial Robbery,51,Sep 2024
+Street Robbery,38,Jan 2018
+Street Robbery,35,Feb 2018
+Street Robbery,39,Mar 2018
+Street Robbery,43,Apr 2018
+Street Robbery,71,May 2018
+Street Robbery,52,Jun 2018
+Street Robbery,61,Jul 2018
+Street Robbery,63,Aug 2018
+Street Robbery,62,Sep 2018
+Street Robbery,62,Oct 2018
+Street Robbery,70,Nov 2018
+Street Robbery,63,Dec 2018
+Street Robbery,64,Jan 2019
+Street Robbery,20,Feb 2019
+Street Robbery,54,Mar 2019
+Street Robbery,53,Apr 2019
+Street Robbery,49,May 2019
+Street Robbery,45,Jun 2019
+Street Robbery,64,Jul 2019
+Street Robbery,58,Aug 2019
+Street Robbery,74,Sep 2019
+Street Robbery,71,Oct 2019
+Street Robbery,51,Nov 2019
+Street Robbery,48,Dec 2019
+Street Robbery,66,Jan 2020
+Street Robbery,59,Feb 2020
+Street Robbery,52,Mar 2020
+Street Robbery,28,Apr 2020
+Street Robbery,32,May 2020
+Street Robbery,23,Jun 2020
+Street Robbery,40,Jul 2020
+Street Robbery,59,Aug 2020
+Street Robbery,42,Sep 2020
+Street Robbery,44,Oct 2020
+Street Robbery,46,Nov 2020
+Street Robbery,35,Dec 2020
+Street Robbery,33,Jan 2021
+Street Robbery,43,Feb 2021
+Street Robbery,36,Mar 2021
+Street Robbery,53,Apr 2021
+Street Robbery,63,May 2021
+Street Robbery,46,Jun 2021
+Street Robbery,65,Jul 2021
+Street Robbery,48,Aug 2021
+Street Robbery,46,Sep 2021
+Street Robbery,53,Oct 2021
+Street Robbery,61,Nov 2021
+Street Robbery,35,Dec 2021
+Street Robbery,55,Jan 2022
+Street Robbery,41,Feb 2022
+Street Robbery,41,Mar 2022
+Street Robbery,35,Apr 2022
+Street Robbery,53,May 2022
+Street Robbery,35,Jun 2022
+Street Robbery,38,Jul 2022
+Street Robbery,63,Aug 2022
+Street Robbery,66,Sep 2022
+Street Robbery,59,Oct 2022
+Street Robbery,39,Nov 2022
+Street Robbery,34,Dec 2022
+Street Robbery,43,Jan 2023
+Street Robbery,48,Feb 2023
+Street Robbery,75,Mar 2023
+Street Robbery,59,Apr 2023
+Street Robbery,72,May 2023
+Street Robbery,78,Jun 2023
+Street Robbery,60,Jul 2023
+Street Robbery,63,Aug 2023
+Street Robbery,61,Sep 2023
+Street Robbery,58,Oct 2023
+Street Robbery,50,Nov 2023
+Street Robbery,52,Dec 2023
+Street Robbery,40,Jan 2024
+Street Robbery,43,Feb 2024
+Street Robbery,54,Mar 2024
+Street Robbery,46,Apr 2024
+Street Robbery,62,May 2024
+Street Robbery,63,Jun 2024
+Street Robbery,46,Jul 2024
+Street Robbery,54,Aug 2024
+Street Robbery,66,Sep 2024
+Theft FROM Vehicle,962,Jan 2018
+Theft FROM Vehicle,645,Feb 2018
+Theft FROM Vehicle,818,Mar 2018
+Theft FROM Vehicle,870,Apr 2018
+Theft FROM Vehicle,1063,May 2018
+Theft FROM Vehicle,1036,Jun 2018
+Theft FROM Vehicle,1321,Jul 2018
+Theft FROM Vehicle,1400,Aug 2018
+Theft FROM Vehicle,1292,Sep 2018
+Theft FROM Vehicle,1269,Oct 2018
+Theft FROM Vehicle,1028,Nov 2018
+Theft FROM Vehicle,955,Dec 2018
+Theft FROM Vehicle,1101,Jan 2019
+Theft FROM Vehicle,714,Feb 2019
+Theft FROM Vehicle,919,Mar 2019
+Theft FROM Vehicle,1097,Apr 2019
+Theft FROM Vehicle,1268,May 2019
+Theft FROM Vehicle,1344,Jun 2019
+Theft FROM Vehicle,1523,Jul 2019
+Theft FROM Vehicle,1619,Aug 2019
+Theft FROM Vehicle,1512,Sep 2019
+Theft FROM Vehicle,1313,Oct 2019
+Theft FROM Vehicle,1253,Nov 2019
+Theft FROM Vehicle,1107,Dec 2019
+Theft FROM Vehicle,1173,Jan 2020
+Theft FROM Vehicle,1210,Feb 2020
+Theft FROM Vehicle,1082,Mar 2020
+Theft FROM Vehicle,1068,Apr 2020
+Theft FROM Vehicle,796,May 2020
+Theft FROM Vehicle,824,Jun 2020
+Theft FROM Vehicle,1078,Jul 2020
+Theft FROM Vehicle,1189,Aug 2020
+Theft FROM Vehicle,1230,Sep 2020
+Theft FROM Vehicle,1230,Oct 2020
+Theft FROM Vehicle,889,Nov 2020
+Theft FROM Vehicle,681,Dec 2020
+Theft FROM Vehicle,822,Jan 2021
+Theft FROM Vehicle,617,Feb 2021
+Theft FROM Vehicle,852,Mar 2021
+Theft FROM Vehicle,828,Apr 2021
+Theft FROM Vehicle,847,May 2021
+Theft FROM Vehicle,789,Jun 2021
+Theft FROM Vehicle,908,Jul 2021
+Theft FROM Vehicle,968,Aug 2021
+Theft FROM Vehicle,918,Sep 2021
+Theft FROM Vehicle,948,Oct 2021
+Theft FROM Vehicle,945,Nov 2021
+Theft FROM Vehicle,788,Dec 2021
+Theft FROM Vehicle,1060,Jan 2022
+Theft FROM Vehicle,902,Feb 2022
+Theft FROM Vehicle,1199,Mar 2022
+Theft FROM Vehicle,1074,Apr 2022
+Theft FROM Vehicle,1153,May 2022
+Theft FROM Vehicle,1219,Jun 2022
+Theft FROM Vehicle,1094,Jul 2022
+Theft FROM Vehicle,1143,Aug 2022
+Theft FROM Vehicle,979,Sep 2022
+Theft FROM Vehicle,947,Oct 2022
+Theft FROM Vehicle,846,Nov 2022
+Theft FROM Vehicle,817,Dec 2022
+Theft FROM Vehicle,880,Jan 2023
+Theft FROM Vehicle,764,Feb 2023
+Theft FROM Vehicle,873,Mar 2023
+Theft FROM Vehicle,818,Apr 2023
+Theft FROM Vehicle,886,May 2023
+Theft FROM Vehicle,914,Jun 2023
+Theft FROM Vehicle,856,Jul 2023
+Theft FROM Vehicle,751,Aug 2023
+Theft FROM Vehicle,710,Sep 2023
+Theft FROM Vehicle,611,Oct 2023
+Theft FROM Vehicle,619,Nov 2023
+Theft FROM Vehicle,563,Dec 2023
+Theft FROM Vehicle,448,Jan 2024
+Theft FROM Vehicle,452,Feb 2024
+Theft FROM Vehicle,423,Mar 2024
+Theft FROM Vehicle,543,Apr 2024
+Theft FROM Vehicle,563,May 2024
+Theft FROM Vehicle,572,Jun 2024
+Theft FROM Vehicle,563,Jul 2024
+Theft FROM Vehicle,506,Aug 2024
+Theft FROM Vehicle,502,Sep 2024
+Theft FROM Vehicle,120,Oct 2024
+Theft OF Vehicle,600,Jan 2018
+Theft OF Vehicle,553,Feb 2018
+Theft OF Vehicle,504,Mar 2018
+Theft OF Vehicle,515,Apr 2018
+Theft OF Vehicle,458,May 2018
+Theft OF Vehicle,421,Jun 2018
+Theft OF Vehicle,594,Jul 2018
+Theft OF Vehicle,508,Aug 2018
+Theft OF Vehicle,492,Sep 2018
+Theft OF Vehicle,482,Oct 2018
+Theft OF Vehicle,457,Nov 2018
+Theft OF Vehicle,500,Dec 2018
+Theft OF Vehicle,461,Jan 2019
+Theft OF Vehicle,467,Feb 2019
+Theft OF Vehicle,437,Mar 2019
+Theft OF Vehicle,441,Apr 2019
+Theft OF Vehicle,487,May 2019
+Theft OF Vehicle,471,Jun 2019
+Theft OF Vehicle,630,Jul 2019
+Theft OF Vehicle,567,Aug 2019
+Theft OF Vehicle,651,Sep 2019
+Theft OF Vehicle,515,Oct 2019
+Theft OF Vehicle,511,Nov 2019
+Theft OF Vehicle,444,Dec 2019
+Theft OF Vehicle,512,Jan 2020
+Theft OF Vehicle,451,Feb 2020
+Theft OF Vehicle,469,Mar 2020
+Theft OF Vehicle,428,Apr 2020
+Theft OF Vehicle,260,May 2020
+Theft OF Vehicle,297,Jun 2020
+Theft OF Vehicle,362,Jul 2020
+Theft OF Vehicle,389,Aug 2020
+Theft OF Vehicle,415,Sep 2020
+Theft OF Vehicle,418,Oct 2020
+Theft OF Vehicle,357,Nov 2020
+Theft OF Vehicle,361,Dec 2020
+Theft OF Vehicle,442,Jan 2021
+Theft OF Vehicle,382,Feb 2021
+Theft OF Vehicle,326,Mar 2021
+Theft OF Vehicle,355,Apr 2021
+Theft OF Vehicle,318,May 2021
+Theft OF Vehicle,326,Jun 2021
+Theft OF Vehicle,401,Jul 2021
+Theft OF Vehicle,377,Aug 2021
+Theft OF Vehicle,377,Sep 2021
+Theft OF Vehicle,355,Oct 2021
+Theft OF Vehicle,391,Nov 2021
+Theft OF Vehicle,462,Dec 2021
+Theft OF Vehicle,483,Jan 2022
+Theft OF Vehicle,462,Feb 2022
+Theft OF Vehicle,552,Mar 2022
+Theft OF Vehicle,440,Apr 2022
+Theft OF Vehicle,469,May 2022
+Theft OF Vehicle,454,Jun 2022
+Theft OF Vehicle,450,Jul 2022
+Theft OF Vehicle,546,Aug 2022
+Theft OF Vehicle,362,Sep 2022
+Theft OF Vehicle,443,Oct 2022
+Theft OF Vehicle,403,Nov 2022
+Theft OF Vehicle,460,Dec 2022
+Theft OF Vehicle,430,Jan 2023
+Theft OF Vehicle,350,Feb 2023
+Theft OF Vehicle,445,Mar 2023
+Theft OF Vehicle,328,Apr 2023
+Theft OF Vehicle,373,May 2023
+Theft OF Vehicle,382,Jun 2023
+Theft OF Vehicle,386,Jul 2023
+Theft OF Vehicle,364,Aug 2023
+Theft OF Vehicle,402,Sep 2023
+Theft OF Vehicle,357,Oct 2023
+Theft OF Vehicle,343,Nov 2023
+Theft OF Vehicle,375,Dec 2023
+Theft OF Vehicle,376,Jan 2024
+Theft OF Vehicle,324,Feb 2024
+Theft OF Vehicle,340,Mar 2024
+Theft OF Vehicle,337,Apr 2024
+Theft OF Vehicle,305,May 2024
+Theft OF Vehicle,320,Jun 2024
+Theft OF Vehicle,381,Jul 2024
+Theft OF Vehicle,332,Aug 2024
+Theft OF Vehicle,327,Sep 2024
+Theft OF Vehicle,146,Oct 2024
+Violence  'Other' (Non-domestic),192,Jan 2018
+Violence  'Other' (Non-domestic),147,Feb 2018
+Violence  'Other' (Non-domestic),176,Mar 2018
+Violence  'Other' (Non-domestic),154,Apr 2018
+Violence  'Other' (Non-domestic),175,May 2018
+Violence  'Other' (Non-domestic),188,Jun 2018
+Violence  'Other' (Non-domestic),159,Jul 2018
+Violence  'Other' (Non-domestic),182,Aug 2018
+Violence  'Other' (Non-domestic),154,Sep 2018
+Violence  'Other' (Non-domestic),174,Oct 2018
+Violence  'Other' (Non-domestic),166,Nov 2018
+Violence  'Other' (Non-domestic),152,Dec 2018
+Violence  'Other' (Non-domestic),211,Jan 2019
+Violence  'Other' (Non-domestic),153,Feb 2019
+Violence  'Other' (Non-domestic),158,Mar 2019
+Violence  'Other' (Non-domestic),148,Apr 2019
+Violence  'Other' (Non-domestic),171,May 2019
+Violence  'Other' (Non-domestic),165,Jun 2019
+Violence  'Other' (Non-domestic),180,Jul 2019
+Violence  'Other' (Non-domestic),147,Aug 2019
+Violence  'Other' (Non-domestic),164,Sep 2019
+Violence  'Other' (Non-domestic),161,Oct 2019
+Violence  'Other' (Non-domestic),184,Nov 2019
+Violence  'Other' (Non-domestic),152,Dec 2019
+Violence  'Other' (Non-domestic),201,Jan 2020
+Violence  'Other' (Non-domestic),162,Feb 2020
+Violence  'Other' (Non-domestic),147,Mar 2020
+Violence  'Other' (Non-domestic),124,Apr 2020
+Violence  'Other' (Non-domestic),139,May 2020
+Violence  'Other' (Non-domestic),184,Jun 2020
+Violence  'Other' (Non-domestic),204,Jul 2020
+Violence  'Other' (Non-domestic),192,Aug 2020
+Violence  'Other' (Non-domestic),192,Sep 2020
+Violence  'Other' (Non-domestic),182,Oct 2020
+Violence  'Other' (Non-domestic),169,Nov 2020
+Violence  'Other' (Non-domestic),136,Dec 2020
+Violence  'Other' (Non-domestic),190,Jan 2021
+Violence  'Other' (Non-domestic),134,Feb 2021
+Violence  'Other' (Non-domestic),178,Mar 2021
+Violence  'Other' (Non-domestic),165,Apr 2021
+Violence  'Other' (Non-domestic),170,May 2021
+Violence  'Other' (Non-domestic),191,Jun 2021
+Violence  'Other' (Non-domestic),186,Jul 2021
+Violence  'Other' (Non-domestic),199,Aug 2021
+Violence  'Other' (Non-domestic),225,Sep 2021
+Violence  'Other' (Non-domestic),190,Oct 2021
+Violence  'Other' (Non-domestic),205,Nov 2021
+Violence  'Other' (Non-domestic),191,Dec 2021
+Violence  'Other' (Non-domestic),146,Jan 2022
+Violence  'Other' (Non-domestic),180,Feb 2022
+Violence  'Other' (Non-domestic),177,Mar 2022
+Violence  'Other' (Non-domestic),173,Apr 2022
+Violence  'Other' (Non-domestic),174,May 2022
+Violence  'Other' (Non-domestic),163,Jun 2022
+Violence  'Other' (Non-domestic),219,Jul 2022
+Violence  'Other' (Non-domestic),160,Aug 2022
+Violence  'Other' (Non-domestic),186,Sep 2022
+Violence  'Other' (Non-domestic),213,Oct 2022
+Violence  'Other' (Non-domestic),165,Nov 2022
+Violence  'Other' (Non-domestic),182,Dec 2022
+Violence  'Other' (Non-domestic),180,Jan 2023
+Violence  'Other' (Non-domestic),175,Feb 2023
+Violence  'Other' (Non-domestic),198,Mar 2023
+Violence  'Other' (Non-domestic),198,Apr 2023
+Violence  'Other' (Non-domestic),247,May 2023
+Violence  'Other' (Non-domestic),207,Jun 2023
+Violence  'Other' (Non-domestic),216,Jul 2023
+Violence  'Other' (Non-domestic),205,Aug 2023
+Violence  'Other' (Non-domestic),185,Sep 2023
+Violence  'Other' (Non-domestic),179,Oct 2023
+Violence  'Other' (Non-domestic),172,Nov 2023
+Violence  'Other' (Non-domestic),156,Dec 2023
+Violence  'Other' (Non-domestic),192,Jan 2024
+Violence  'Other' (Non-domestic),149,Feb 2024
+Violence  'Other' (Non-domestic),171,Mar 2024
+Violence  'Other' (Non-domestic),182,Apr 2024
+Violence  'Other' (Non-domestic),194,May 2024
+Violence  'Other' (Non-domestic),170,Jun 2024
+Violence  'Other' (Non-domestic),189,Jul 2024
+Violence  'Other' (Non-domestic),173,Aug 2024
+Violence  'Other' (Non-domestic),190,Sep 2024
