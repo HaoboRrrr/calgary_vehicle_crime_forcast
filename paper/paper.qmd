@@ -3,7 +3,7 @@ title: "Focasting The Trend of Vehicle Related Crime In Calgary In 2025"
 subtitle: "An Analysis of Calgary's Crime Count From 2018 to 2024"
 author: 
   - Haobo Ren
-thanks: "Code and data are available at: [https://github.com/RohanAlexander/starter_folder](https://github.com/RohanAlexander/starter_folder)."
+thanks: "Code and data are available at: https://github.com/HaoboRrrr/calgary_vehicle_crime_forcast"
 date: 23-November-2024
 date-format: long
 abstract: "Vehicle-related crime is a long-standing challenge to urban security, so accurate prediction is necessary to effectively allocate police resources and develop security policies. This study examines trends in vehicle-related crime in Calgary, Canada, focusing on two types of crime: Theft of vehicle and Theft from vehicle. A Bayesian regression model is fit to historical crime data from January 2018 to October 2024, accounting for seasonal variations (months), long-term trends (years), and differences between crime categories. The usefulness of Bayesian modeling for crime trend forecasting is demonstrated by this analysis, providing law enforcement and policymakers practical insights to foresee and handle long-term and seasonal crime trends."
@@ -18,6 +18,9 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
+library(here)
+library(knitr)
+
 
 ```
 
@@ -34,61 +37,48 @@ The study is significant for its role in proactive crime prevention and resource
 
 #Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
 
-The data analysis and visualization is done in R[@citeR] with the following Packages: 
 
 # Data {#sec-data}
 
 ## Overview
 
-We use the statistical programming language R [@citeR].... Our data [@shelter].... Following @tellingstories, we consider...
+The raw dataset obtained from Open Data Calgary[@OpenCalgary] was recorded and updated monthly by the Calgary Police Service. The data is considered cumulative as late-reported incidents are often received well after an offence has occurred. An incident is either reported just after the crime happened, or reported on the Calgary Police Service[@calgarypolice].
 
-Overview text
+The data analysis and visualization is done in R[@citeR] with the following Packages: tidyverse[@tidy], janitor[@janitor], arrow[@arrow], rstanarm[@rstanarm], ggplot2[@ggplot2], dplyr[@dplyr], here, knitr.
 
 ## Measurement
 	
-Some paragraphs about how we go from a phenomena in the world to an entry in the dataset.
+The data reflects reported crime incidents across Calgary, categorized by community, crime type, and temporal details (year and month). Each row in the dataset represents a summary of crime counts for a specific category and community within a given month and year. The Calgary Police Service serves as the primary source, systematically recording incidents reported by the public. These reports may be filed in several ways, including: immediate Reporting and delayed Reporting.
 
-## Outcome variables
+Crime count quantifies the number of reported incidents of a specific crime and time period and is based on the most serious violation per incident. The count represents and aggregation of individual reports collected by the Calgary Police Services. 
 
-Add graphs, tables and text. Use sub-sub-headings for each outcome variable or update the subheading to be singular.
+There are limitations in these measurement. Reporting Bias: Not all crimes are reported. Minor incidents or those involving uninsured vehicles may go unreported, leading to underestimation of true crime rates. Cumulative Nature: The inclusion of late-reported incidents makes it challenging to distinguish between crimes that occurred during the reported month versus those that occurred earlier.
 
+By understanding how this dataset measures real-world crime phenomena, we can more confidently interpret the insights and predictions derived from it.
 
+## Data Examination {#sec-dataexam}
 
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
-
-```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
-#| echo: false
-
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+The raw data from Open Data has five columns and 75,595 rows, the column names are displayed below: 
 
 ```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
 #| echo: false
 #| warning: false
-#| message: false
+raw_data <- read_csv(here("data/01-raw_data/raw_data.csv"))
 
-analysis_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
+# Get the column names of your raw data
+column_names <- colnames(raw_data)
 
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
-  theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+# Convert the column names to a data frame for kable
+column_df <- as.data.frame(column_names)
+
+# Display with kable
+kable(column_df)
+```
+
+
+
+```{r}
+
 ```
 
 Talk way more about it. 
@@ -145,10 +135,6 @@ Our results are summarized in @tbl-modelresults.
 #| warning: false
 #| message: false
 
-library(rstanarm)
-
-first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
 ```
 
 ```{r}
@@ -158,13 +144,6 @@ first_model <-
 #| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
 #| warning: false
 
-modelsummary::modelsummary(
-  list(
-    "First model" = first_model
-  ),
-  statistic = "mad",
-  fmt = 2
-)
 ```
 
 
@@ -213,15 +192,7 @@ In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. Th
 #| fig-cap: "Examining how the model fits, and is affected by, the data"
 #| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
 
-pp_check(first_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
 
-posterior_vs_prior(first_model) +
-  theme_minimal() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
 ```
 
 ## Diagnostics
@@ -240,9 +211,6 @@ posterior_vs_prior(first_model) +
 #| fig-subcap: ["Trace plot", "Rhat plot"]
 #| layout-ncol: 2
 
-plot(first_model, "trace")
-
-plot(first_model, "rhat")
 ```
 
 
