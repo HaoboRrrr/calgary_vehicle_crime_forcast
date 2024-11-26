@@ -10,6 +10,7 @@
 library(rstanarm)
 library(arrow)
 library(ggplot2)
+library(dplyr)
 
 #### Read data ####
 crime_data <- read_parquet("data/02-analysis_data/calgory_crime.parquet")
