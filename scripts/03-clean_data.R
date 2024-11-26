@@ -7,10 +7,9 @@
 
 
 #### Workspace setup ####
-library(tidyverse)
 library(dplyr)
 library(janitor)
-library(zoo)
+library(arrow)
 
 #### Clean data ####
 raw_data <- read_csv("data/01-raw_data/raw_data.csv")
@@ -18,10 +17,11 @@ raw_data <- read_csv("data/01-raw_data/raw_data.csv")
 cleaned_data <- raw_data %>% clean_names() %>%
   group_by(category, year, month) %>%
   summarise(crime_count = sum(crime_count), .groups = "drop") %>%
-  mutate(time = paste0(year, "-", sprintf("%02d", month))) %>%
-  select(category, crime_count, time) %>% arrange(category,time)
+  mutate(time = as.Date(paste0(year, "-", sprintf("%02d", month), "-01"))) %>%
+  select(category, crime_count, year, month, time) %>% arrange(category, year, month) %>%
+  filter(category == "Theft OF Vehicle" | category == "Theft FROM Vehicle")
 
-cleaned_data$time <- as.yearmon(cleaned_data$time, format = "%Y-%m")
 
 #### Save data ####
-write_csv(cleaned_data, "data/02-analysis_data/analysis_data.csv")
+write_csv(cleaned_data, "data/02-analysis_data/calgory_crime.csv")
+write_parquet(cleaned_data, "data/02-analysis_data/calgory_crime.parquet")

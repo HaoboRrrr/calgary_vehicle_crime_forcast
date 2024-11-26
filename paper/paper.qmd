@@ -1,13 +1,12 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Focasting The Trend of Vehicle Related Crime In Calgary In 2025"
+subtitle: "An Analysis of Calgary's Crime Count From 2018 to 2024"
 author: 
-  - First author
-  - Another author
+  - Haobo Ren
 thanks: "Code and data are available at: [https://github.com/RohanAlexander/starter_folder](https://github.com/RohanAlexander/starter_folder)."
-date: today
+date: 23-November-2024
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "Vehicle-related crime is a long-standing challenge to urban security, so accurate prediction is necessary to effectively allocate police resources and develop security policies. This study examines trends in vehicle-related crime in Calgary, Canada, focusing on two types of crime: Theft of vehicle and Theft from vehicle. A Bayesian regression model is fit to historical crime data from January 2018 to October 2024, accounting for seasonal variations (months), long-term trends (years), and differences between crime categories. The usefulness of Bayesian modeling for crime trend forecasting is demonstrated by this analysis, providing law enforcement and policymakers practical insights to foresee and handle long-term and seasonal crime trends."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -19,17 +18,17 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
+
 ```
 
 
 # Introduction
 
-Overview paragraph
+Urban crime is an ongoing problem compromising public confidence, economic stability, and safety. Among the several types of crimes, vehicle-related offenses include theft of vehicles and theft from vehicles remain a major issue in urban areas across the country. These crimes disturb people's life but also burden local governments and law enforcement. Over the years, Calgary, Canada, has seen varying patterns in vehicle-related crimes, which raises issues regarding future developments of these trends. Designing effective preventive plans, maximizing resource allocation, and guaranteeing community safety all depend on an awareness of current trends and future crime count prediction. This study forecasts vehicle-related crime patterns in Calgary up until 2025, therefore addressing these issues.
 
-Estimand paragraph
+Analyzing and projecting monthly crime counts for theft from vehicles and theft of vehicles in Calgary is the main goal of this study. I created a Bayesian regression model to assess the effects of time (year and month) and crime category on reported crime counts using historical data spanning January 2018 through October 2024. Offering a comprehensive knowledge of how vehicle-related crimes have developed and may continue to alter in the near future, the model catches both long-term patterns and seasonal changes. The research also offers category-specific forecasts, therefore stressing variations in the seasonal and temporal trends of theft from and of vehicles.
 
-Results paragraph
+The analysis reveals a continued decline in vehicle-related crimes in Calgary, with a mean change of -60.5 each year, and notable mean differences of -454.8 between the two categories. Theft from vehicles is anticipated to show cyclical surges in the summer months, indicating possible opportunistic habits. Conversely, vehicle theft exhibits a more stable decline throughout the course of the year. The data indicate that, although overall vehicle-related crimes are down, seasonal surges in certain categories persist as a problem for policymakers and law enforcement to tackle.
 
 Why it matters paragraph
 
