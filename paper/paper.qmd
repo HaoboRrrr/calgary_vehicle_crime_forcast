@@ -20,8 +20,9 @@ bibliography: references.bib
 library(tidyverse)
 library(here)
 library(knitr)
+library(arrow)
 
-
+cleaned_data <- read_parquet(here("data/02-analysis_data/calgary_crime.parquet"))
 ```
 
 
@@ -29,7 +30,7 @@ library(knitr)
 
 Urban crime is an ongoing problem compromising public confidence, economic stability, and safety. Among the several types of crimes, vehicle-related offenses include theft of vehicles and theft from vehicles remain a major issue in urban areas across the country. These crimes disturb people's life but also burden local governments and law enforcement. Over the years, Calgary, Canada, has seen varying patterns in vehicle-related crimes, which raises issues regarding future developments of these trends. Designing effective preventive plans, maximizing resource allocation, and guaranteeing community safety all depend on an awareness of current trends and future crime count prediction. This study forecasts vehicle-related crime patterns in Calgary up until 2025, therefore addressing these issues.
 
-Analyzing and projecting monthly crime counts for theft from vehicles and theft of vehicles in Calgary is the estimand of this study. I created a Bayesian regression model to assess the effects of time (year and month) and crime category on reported crime counts using historical data spanning January 2018 through October 2024. Offering a comprehensive knowledge of how vehicle-related crimes have developed and may continue to alter in the near future, the model catches both long-term patterns and seasonal changes. The research also offers category-specific forecasts, therefore stressing variations in the seasonal and temporal trends of theft from and of vehicles.
+Analyzing and projecting monthly crime counts for theft from vehicles and theft of vehicles in Calgary is the main aim of this study. I created a Bayesian regression model to assess the effects of time (year and month) and crime category on reported crime counts using historical data spanning January 2018 through October 2024. Offering a comprehensive knowledge of how vehicle-related crimes have developed and may continue to alter in the near future, the model catches both long-term patterns and seasonal changes. The research also offers category-specific forecasts, therefore stressing variations in the seasonal and temporal trends of theft from and of vehicles.
 
 The analysis reveals a continued decline in vehicle-related crimes in Calgary, with a mean change of -60.5 each year, and notable mean differences of -454.8 between the two categories. Theft from vehicles is anticipated to show cyclical surges in the summer months, indicating possible opportunistic habits. Conversely, vehicle theft exhibits a more stable decline throughout the course of the year. The data indicate that, although overall vehicle-related crimes are down, seasonal surges in certain categories persist as a problem for policymakers and law enforcement to tackle, for example, the crime count of Theft From Vehicle in August is expected larger than January by 159.4.
 
@@ -74,46 +75,118 @@ column_df <- as.data.frame(column_names)
 # Display with kable
 kable(column_df)
 ```
+- Community: The dataset is spatially disaggregated into Calgary's various communities
 
+Numeric Variable:
 
+- Year: The year of each record indicate when the incidents were reported. 
+
+Categorical Variable:
+
+- Category: Each entry is categorized into distinct crime types.
+
+- month: The month of each incidents recorded. Range from 1-12 repeatedly each year
+
+Response Variable:
+
+- Crime Count: This variable quantifies the number of reported incidents of a specific crime type (e.g., theft from or of vehicles) within a given community and time period. 
+
+## Data Cleaning
+
+Several steps was taken for better analysis of vehicle-related trend in Calgary. First, clean the names of all the columns. Second, the raw dataset contained granular records categorized by Community and specific details. These were aggregated to provide summarized counts of crimes (crime_count) by category, year, and month to align with analysis requirements. Third, a new time column was introduced in the cleaned data, combining year and month into a single date field (YYYY-MM-DD). This was essential for time-series analysis and visualization. Last, filter out the categories related to vehicle.
+
+## Cleaned Data
+
+The first 6 rows of the cleaned dataset are shown in @tbl-cleaned-data.
 
 ```{r}
+#| label: tbl-cleaned-data
+#| tbl-cap: Head of cleaned Calgary Crime data 
+#| echo: false
+#| warning: false
 
+kable(head(cleaned_data))
 ```
 
-Talk way more about it. 
+## Response Variable
 
-## Predictor variables
+### Crime count of Theft FROM Vehicle
 
-Add graphs, tables and text.
+Summary statistics of Crime count of Theft FROM Vehicle are shown in the @tbl-response-theftfromvehicle
 
-Use sub-sub-headings for each outcome variable and feel free to combine a few into one if they go together naturally.
+```{r}
+#| label: tbl-response-theftfromvehicle
+#| tbl-cap: Summary Statitic of crime_count(Theft FROM Vehicle)
+#| echo: false
+#| warning: false
+
+kable(cleaned_data %>% filter(category == "Theft FROM Vehicle") %>% select(crime_count) %>% summary(crime_count))
+```
+
+The response variable, crime_count, represents the number of reported incidents of theft from vehicles within Calgary. The summary statistics reveal a significant variability in the crime counts, ranging from a minimum of 120 to a maximum of 1,619 reported cases. The median value is 916, indicating that half of the recorded months experienced fewer than 916 thefts, while the other half exceeded this value. The mean crime count, at 932.7, is slightly higher than the median, suggesting the presence of months with particularly high crime counts that may be skewing the average. The interquartile range (IQR), spanning from 788.2 (1st quartile) to 1,105.5 (3rd quartile), highlights the central tendency of crime occurrences, with most months falling within this range. These statistics emphasize the fluctuating nature of vehicle thefts in Calgary and provide a foundational understanding for modeling and forecasting future trends.
+
+### Crime count of Theft OF Vehicle
+
+Summary statistics of Crime count of Theft FROM Vehicle are shown in the @tbl-response-theftofvehicle
+
+```{r}
+#| label: tbl-response-theftofvehicle
+#| tbl-cap: Summary Statitic of crime_count(Theft OF Vehicle)
+#| echo: false
+#| warning: false
+
+kable(cleaned_data %>% filter(category == "Theft OF Vehicle") %>% select(crime_count) %>% summary(crime_count))
+```
 
 
+The response variable, crime_count, for Theft OF Vehicle incidents reflects the monthly reported counts of vehicles being stolen in Calgary. The dataset's summary statistics indicate that the crime counts range from a minimum of 146 to a maximum of 651 incidents. The median count is 424.5, suggesting that half of the months have fewer than 425 thefts, while the other half exceed this value. Interestingly, the mean crime count is 422.5, closely aligned with the median, suggesting a relatively symmetric distribution of the data. The interquartile range (IQR) spans from 361.2 (1st quartile) to 469.0 (3rd quartile), indicating that most monthly counts are concentrated within this range. These figures highlight the scale and regularity of vehicle theft in Calgary and form an essential basis for analyzing and forecasting trends in such crimes.
+
+## Predictor Variable
+
+### year
+
+The variable year represents the timeline over which the crime data is recorded, providing insight into how vehicle-related crime counts have changed annually. By analyzing the data across different years, we can observe any long-term trends, such as consistent increases, decreases, or fluctuations in vehicle thefts. This variable helps us understand whether certain years experienced higher crime rates due to factors like economic conditions, population changes, or other external influences.
+
+### month and category
+
+The variables month and category provide a detailed view of how vehicle-related crimes are distributed across time and crime types. Month captures seasonal variations, showing how crime rates fluctuate throughout the year. For example, there might be a tendency for higher crime counts during certain seasons, such as summer or winter, influenced by weather conditions or holiday activities. Category distinguishes between "Theft FROM Vehicle" and "Theft OF Vehicle," allowing us to compare the frequency and patterns of these two crime types. Together, these variables highlight differences in the nature and timing of vehicle-related crimes, offering valuable insights into their temporal and categorical distributions.
+
+## Trend of The Two Crime
+
+The trend of Theft FROM Vehicle and Theft OF Vehicle are shown in @fig-combined-trend
+
+```{r}
+#| label: fig-combined-trend
+#| tbl-cap: Trend of The Two Crime Combined
+#| echo: false
+#| warning: false
+# Plot combined trends
+ggplot(cleaned_data, aes(x = time, y = crime_count, color = category)) +
+  geom_line() +
+  labs(
+    title = "Trend of Theft FROM Vehicle and Theft OF Vehicle",
+    x = "Time",
+    y = "Crime Count",
+    color = "Category"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
 
-
-
-
+The trends for "Theft FROM Vehicle" and "Theft OF Vehicle" reveal distinct patterns over time. "Theft FROM Vehicle" consistently shows higher crime counts compared to "Theft OF Vehicle," indicating that it is a more prevalent issue. The trend for "Theft FROM Vehicle" demonstrates significant fluctuations, with peaks around 2019 and a general decline afterward, suggesting a reduction in these incidents in more recent years. In contrast, "Theft OF Vehicle" exhibits a relatively stable pattern with smaller variations over time. Although it remains less frequent than "Theft FROM Vehicle," its counts appear to decrease gradually, particularly after 2022. Both categories show declining trends toward the end of the observed period, which could reflect successful crime prevention measures or other external influences.
 
 # Model
 
-The goal of our modelling strategy is twofold. Firstly,...
+The Bayesian regression model was developed to analyze and forecast the trends of vehicle-related crimes in Calgary, focusing on the categories "Theft FROM Vehicle" and "Theft OF Vehicle." The primary goal of this modeling is to understand the relationship between crime counts and key predictors such as time (year and month) and crime categories, as well as their interactions. By incorporating temporal and categorical variables, the model seeks to capture long-term trends, seasonal patterns, and differences between the two types of crimes. Ultimately, the model provides a foundation for projecting future crime rates, offering valuable insights that can support strategic decision-making and the development of targeted crime prevention initiatives for 2025 and beyond.
 
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+Background details and diagnostics are included in [Appendix -@sec-model-details].
 
 ## Model set-up
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+The Bayesian regression model is set up to examine the relationship between vehicle-related crime counts and the selected predictors. The response variable, $y_i$, represents the observed crime count for the i-th observation, where each observation corresponds to a specific month, year, and crime category. The predictors include a numeric variable for year, categorical variables for month and category, as well as interaction terms (category:month and category:year) to capture how crime patterns differ between the two crime types over time and across seasons.
 
-\begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
-\end{align}
+The model assumes the form:
 
 We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
 
@@ -127,7 +200,7 @@ We can use maths by including latex between dollar signs, for instance $\theta$.
 
 # Results
 
-Our results are summarized in @tbl-modelresults.
+Our results are summarized in 
 
 ```{r}
 #| echo: false
@@ -140,7 +213,7 @@ Our results are summarized in @tbl-modelresults.
 ```{r}
 #| echo: false
 #| eval: true
-#| label: tbl-modelresults
+
 #| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
 #| warning: false
 
