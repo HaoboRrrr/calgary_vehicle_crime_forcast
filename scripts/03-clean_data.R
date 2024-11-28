@@ -23,5 +23,5 @@ cleaned_data <- raw_data %>% clean_names() %>%
 
 
 #### Save data ####
-write_csv(cleaned_data, "data/02-analysis_data/calgory_crime.csv")
-write_parquet(cleaned_data, "data/02-analysis_data/calgory_crime.parquet")
+write_csv(cleaned_data, "data/02-analysis_data/calgary_crime.csv")
+write_parquet(cleaned_data, "data/02-analysis_data/calgary_crime.parquet")

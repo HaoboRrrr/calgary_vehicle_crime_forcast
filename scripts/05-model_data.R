@@ -13,7 +13,7 @@ library(ggplot2)
 library(dplyr)
 
 #### Read data ####
-crime_data <- read_parquet("data/02-analysis_data/calgory_crime.parquet")
+crime_data <- read_parquet("data/02-analysis_data/calgary_crime.parquet")
 
 ### Model data ####
 
@@ -78,4 +78,6 @@ saveRDS(
   file = "models/crime_model.rds"
 )
 
-
+#### Save Fitted Data ####
+write_csv(combined_data,"data/02-analysis_data/fitted_calgary_crime.csv")
+write_parquet(combined_data,"data/02-analysis_data/fitted_calgary_crime.parquet")
