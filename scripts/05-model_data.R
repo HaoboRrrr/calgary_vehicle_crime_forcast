@@ -16,7 +16,7 @@ library(dplyr)
 crime_data <- read_parquet("data/02-analysis_data/calgary_crime.parquet")
 
 ### Model data ####
-
+set.seed(123)
 # Ensure `category` is treated as a factor
 crime_data$category <- as.factor(crime_data$category)
 crime_data$month <- as.factor(crime_data$month)
@@ -81,3 +81,5 @@ saveRDS(
 #### Save Fitted Data ####
 write_csv(combined_data,"data/02-analysis_data/fitted_calgary_crime.csv")
 write_parquet(combined_data,"data/02-analysis_data/fitted_calgary_crime.parquet")
+
+summary(crime_model)
