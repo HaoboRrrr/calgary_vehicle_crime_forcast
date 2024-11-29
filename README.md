@@ -70,5 +70,7 @@ Model Diagnostics: Residuals, Q-Q plots, and posterior predictive checks.
 ## Future Work
 
 Policy Analysis: Investigate the impact of specific interventions on crime trends.
+
 Additional Predictors: Include socioeconomic and geographic variables.
+
 Extended Timeframes: Analyze post-2024 data to validate forecasts.
