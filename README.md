@@ -6,11 +6,17 @@ This repository contains the analysis and forecasting for vehicle-related crimes
 The study uses a Bayesian regression model applied to crime data from January 2018 to October 2024, providing forecasts for 2025. The goal is to understand historical trends, seasonal patterns, and category-specific differences to support law enforcement and policy decisions.
 
 ## Contents
+
 Files in this Repository:
+
 data/: Contains the raw and cleaned datasets used for the analysis.
+
 scripts/: Includes R scripts for data cleaning, modeling, and visualization.
+
 model/: The Bayesian regression model file and its output summary.
+
 visualizations/: Figures showing trends and model diagnostics.
+
 paper/: Full analysis report (.pdf) and Quarto source file (.qmd).
 
 ## Key Findings
@@ -31,11 +37,13 @@ Theft FROM Vehicle exhibits pronounced seasonal surges but a sharper overall dec
 Theft OF Vehicle shows a steadier decline with fewer seasonal fluctuations.
 
 ## Methodology
+
 Data Sources
 
 Crime data was sourced from the Open Data Calgary platform, recorded and updated monthly by the Calgary Police Service.
 
 ## Analysis
+
 Data Cleaning:
 
 Aggregation by year, month, and category.
