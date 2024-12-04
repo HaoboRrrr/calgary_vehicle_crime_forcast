@@ -26,6 +26,7 @@ library(bayesplot)
 
 cleaned_data <- read_parquet(here("data/02-analysis_data/calgary_crime.parquet"))
 fitted_data <- read_parquet(here("data/02-analysis_data/fitted_calgary_crime.parquet"))
+raw_data <- read_csv(here("data/01-raw_data/raw_data.csv"))
 ```
 
 
@@ -69,16 +70,9 @@ The raw data from Open Data has five columns and 75,595 rows, the column names a
 #| tbl-cap: Column Names of Raw Data
 #| echo: false
 #| warning: false
-raw_data <- read_csv(here("data/01-raw_data/raw_data.csv"))
 
 # Get the column names of your raw data
-column_names <- colnames(raw_data)
-
-# Convert the column names to a data frame for kable
-column_df <- as.data.frame(column_names)
-
-# Display with kable
-kable(column_df)
+kable(head(raw_data))
 ```
 - Community: The dataset is spatially disaggregated into Calgary's various communities
 
@@ -436,49 +430,169 @@ pp_check(crime_model, plotfun = "dens_overlay") +
 
 The observed data aligns closely with the predictive distributions, indicating that the model captures the overall distribution of crime counts effectively. Any systematic mismatch could suggest model misspecification, but in this case, the results indicate good fit.
 
-# Idealized Methodology for Data Collection and Analysis{#sec-ideal-meth}
+# Idealized Methodology for Data Collection, Analysis and Survey{#sec-ideal-meth}
 
 ## Overview
 
-This section explores an idealized methodology for improving the quality and comprehensiveness of data collection and analysis for vehicle-related crimes in Calgary. While the current study relies on observational data, an ideal approach would incorporate advanced survey methodologies, improved sampling techniques, and simulations to address limitations in the existing dataset. This methodological framework can enhance the reliability of findings and strengthen the connection between crime trends and causal factors.
+The current Calgary crime dataset, while robust in capturing reported crimes, lacks contextual and unreported crime data that could enrich analyses. An idealized methodology involves supplementing this dataset with survey-based data collection to gather information about unreported crimes, public perceptions of safety, and crime-related behaviors. This approach bridges gaps in observational data and offers a more comprehensive view of crime dynamics in Calgary.
 
-## Survey Design and Data Collection
+Key goals of this methodology include:
 
-Comprehensive Crime Surveys:
+- Capturing unreported crimes to reduce underreporting bias.
 
-- Ideal Scenario: Conduct regular city-wide crime surveys that include questions about both reported and unreported vehicle-related crimes.
+- Understanding the demographic and socioeconomic contexts of crime victims.
+ 
+- Providing actionable insights for law enforcement and policymakers.
 
-- Purpose: Current data likely underreports actual crime counts due to reliance on police-reported incidents. Surveys can capture unreported cases, providing a fuller picture of crime trends.
+## Sampling Approach
 
-- Methodology: Use stratified random sampling to ensure representation from different neighborhoods, socioeconomic strata, and demographic groups.
+Target Population:
 
-- Link to Literature: Surveys such as the British Crime Survey have demonstrated the value of incorporating unreported crimes into official statistics, highlighting disparities between reported and actual crime rates (Hough & Maxfield, 2007).
+- The target population includes Calgary residents aged 18 and above, distributed across all neighborhoods.
 
-Integration with Citizen-Generated Data:
+Stratified Random Sampling:
 
-- Ideal Scenario: Incorporate data from mobile applications or online platforms where citizens can anonymously report crimes.
+- Stratification ensures that the sample reflects Calgary’s diverse population, accounting for factors like neighborhood, income levels, age, and gender.
 
-- Purpose: Technology-driven reporting can supplement official data and improve coverage in areas with low reporting rates.
+- Neighborhood-level stratification ensures that areas with low reporting rates are adequately represented.
 
-- Implementation: Partner with local governments to develop secure, user-friendly platforms.
+Sample Size:
 
-## Sampling Methodology
+- A sample of approximately 2,000 respondents is proposed to ensure statistical power and generalizability, accounting for Calgary’s population size and distribution.
 
-Randomized Geospatial Sampling:
+Randomized Sampling:
 
-- Current Limitation: Observational data may over-represent areas with higher police presence or reporting infrastructure.
+- Respondents within each stratum are selected using random digit dialing for phone surveys or randomized email invitations for online surveys.
 
-- Ideal Scenario: Implement geospatial sampling techniques to collect crime data evenly across Calgary, ensuring inclusion of underrepresented areas.
+## Respondent Recruitment
 
-- Simulation Study: Simulate different sampling scenarios to evaluate their impact on data completeness and spatial bias reduction.
+Recruitment Strategy:
 
-Temporal Sampling:
+- ultimodal recruitment methods ensure inclusivity and accessibility:
+  - Phone Calls: For residents with landlines or mobile numbers.
+  - Online Platforms: Using email invitations and social media campaigns.
+  - In-Person Outreach: At community centers or local events, especially in neighborhoods with limited internet access.
+  
+Incentives:
 
-- Current Limitation: Monthly aggregation in the dataset may mask short-term spikes or declines in crime activity.
+- Respondents are offered small incentives, such as gift cards or charitable donations on their behalf, to encourage participation.
 
-- Ideal Scenario: Collect daily or weekly data to capture finer temporal variations in crime trends.
+Inclusivity Measures:
 
-- Example: A 2021 study on urban crime by Smith et al. showed that daily data improves the detection of time-sensitive factors like weather or public events.
+- Surveys are made available in multiple languages, reflecting Calgary’s linguistic diversity.
+Accessibility features, such as larger print and audio formats, are provided for individuals with disabilities.
+
+## Data Validation
+
+Verification of Responses:
+
+- Responses are cross-referenced with existing crime statistics where possible (e.g., verifying reported incidents through CPS records) to ensure consistency.
+
+- Duplicate or inconsistent responses are flagged and removed during preprocessing.
+
+Filtering Out Biases:
+
+- Screening questions are included to ensure respondents meet eligibility criteria (e.g., Calgary residency).
+
+- Statistical techniques, such as post-stratification weighting, are applied to align the sample distribution with Calgary’s population demographics.
+
+Handling Missing or Ambiguous Data:
+
+- Missing responses are minimized through mandatory fields for critical questions.
+Ambiguous responses are flagged for follow-up where feasible.
+
+## Survey Structure
+
+Sections and Topics:
+
+- Demographics: Age, gender, income, education level, and neighborhood of residence.
+Crime Experience: Details about reported and unreported crimes, including the type, timing, and location of incidents.
+
+- Perceptions of Safety: Questions on how safe respondents feel in their neighborhood and during specific times of the day.
+
+- Behavioral Insights: Questions on precautions taken to avoid crime (e.g., locking vehicles, using anti-theft devices).
+
+Question Types:
+
+- Closed-Ended Questions: For quantifiable data (e.g., “Have you ever been a victim of vehicle-related crime?”).
+
+- Likert Scales: To measure perceptions of safety and trust in law enforcement.
+
+- Open-Ended Questions: To allow respondents to share additional insights.
+
+Length and Accessibility:
+
+- The survey is designed to take no more than 15 minutes to complete, balancing depth of information with respondent engagement.
+
+## Implementation of The Survey: Calgary Vehicle-Related Crime and Safety Survey
+
+### Introduction
+
+Hello, and thank you for participating in this survey! Your responses will help us better understand vehicle-related crimes and public safety in Calgary. The survey will take approximately 10–15 minutes to complete. Your answers are anonymous, and all data will be used for research purposes only.
+
+### Section 1: Demographic Information
+
+* What is your age?
+  - Under 18
+  - 18–24
+  - 25–34
+  - 35–44
+  - 45–54
+  - 55–64
+  - 65 or older
+ 
+* What is your gender?
+  - Male
+  - Female
+  - Non-binary
+  - Prefer not to say
+ 
+* What is your highest level of education?
+  - Less than high school
+  - High school diploma or equivalent
+  - Some college/university
+  - Bachelor’s degree
+  - Graduate degree
+  
+* What is your household income?
+  - Less than $30,000
+  - \$30,000 – \$59,999
+  - \$60,000 – \$99,999
+  - \$100,000 – \$149,999
+  - \$150,000 or more
+  - Prefer not to say
+  
+* In which neighborhood of Calgary do you reside?
+  - (Dropdown menu of Calgary neighborhoods or a text field for manual entry)
+
+### Section 2: Crime Experience
+
+* Have you ever experienced vehicle-related crime in Calgary?
+  - Yes
+  - No
+  
+* (If Yes) What type of vehicle-related crime did you experience? (Check all that apply)
+  - Theft FROM Vehicle (e.g., stolen items from inside or outside your car)
+  - Theft OF Vehicle (e.g., stolen car)
+  - Vandalism (e.g., broken windows, graffiti)
+  
+* When did the most recent vehicle-related crime occur?
+  - Within the past month
+  - Within the past 6 months
+  - Within the past year
+  - More than a year ago
+  
+* Did you report this incident to the Calgary Police Service?
+  - Yes
+  - No
+  - I’m not sure
+  
+* (If No) Why didn’t you report the incident? (Check all that apply)
+  - It wasn’t serious enough
+  - I didn’t think the police could help
+  - I didn’t have time to report it
+  - I didn’t know how to report it
+  - Other (please specify): __________
 
 \newpage
 
