@@ -1,0 +1,11 @@
+"0","#| label: tbl-raw"
+"0","#| tbl-cap: Column Names of Raw Data"
+"0","#| echo: false"
+"0","#| warning: false"
+"0",""
+"0","# Get the column names of your raw data"
+"0","kable(head(raw_data))"
+"2","Registered S3 method overwritten by 'rmarkdown':
+  method         from
+  print.paged_df     
+"
