@@ -2,8 +2,8 @@
     "sortOrder": [
         {
             "columnIndex": 2,
-            "ascending": false
+            "ascending": true
         }
     ],
-    "path": "~/Desktop/STA304/final/final_paper_temp"
+    "path": "~/Desktop/STA304/final/final_paper_temp/paper"
 }
