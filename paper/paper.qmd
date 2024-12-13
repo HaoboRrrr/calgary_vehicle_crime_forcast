@@ -6,7 +6,7 @@ author:
 thanks: "Code and data are available at: https://github.com/HaoboRrrr/calgary_vehicle_crime_forcast"
 date: 23-November-2024
 date-format: long
-abstract: "Vehicle-related crime is a long-standing challenge to urban security, so accurate prediction is necessary to effectively allocate police resources and develop security policies. This study examines trends in vehicle-related crime in Calgary, Canada, focusing on two types of crime: Theft of vehicle and Theft from vehicle. A Bayesian regression model is fit to historical crime data from January 2018 to October 2024, accounting for seasonal variations (months), long-term trends (years), and differences between crime categories. The usefulness of Bayesian modeling for crime trend forecasting is demonstrated by this analysis, providing law enforcement and policymakers practical insights to foresee and handle long-term and seasonal crime trends."
+abstract: "Vehicle-related crime is a long-standing challenge to urban security, so accurate prediction is necessary to effectively allocate police resources and develop security policies. This study examines trends in vehicle-related crime in Calgary, Canada, focusing on two types of crime: Theft of vehicle and Theft from vehicle. A Bayesian regression model is fit to historical crime data from January 2018 to October 2024, accounting for seasonal variations (months), long-term trends (years), and differences between crime categories. The usefulness of Bayesian modeling for crime trend forecasting is demonstrated by this analysis, providing law enforcement and policymakers practical perception to foresee and handle long-term and seasonal crime trends."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -34,11 +34,11 @@ raw_data <- read_csv(here("data/01-raw_data/raw_data.csv"))
 
 Urban crime is an ongoing problem compromising public confidence, economic stability, and safety[@un2012enhancing]. Among the several types of crimes, vehicle-related offenses include theft of vehicles and theft from vehicles remain a major issue in urban areas across the country[@rakauskas2009identification]. These crimes disturb people's life but also burden local governments and law enforcement[@crawford2009urban]. Over the years, Calgary, Canada, has seen varying patterns in vehicle-related crimes, which raises issues regarding future developments of these trends. Designing effective preventive plans, maximizing resource allocation, and guaranteeing community safety all depend on an awareness of current trends and future crime count prediction. This study forecasts vehicle-related crime patterns in Calgary up until 2025, therefore addressing these issues.
 
-Analyzing and projecting monthly crime counts for theft from vehicles and theft of vehicles in Calgary is the main aim of this study. I created a Bayesian regression model to assess the effects of time (year and month) and crime category on reported crime counts using historical data spanning January 2018 through October 2024. Offering a comprehensive knowledge of how vehicle-related crimes have developed and may continue to alter in the near future, the model catches both long-term patterns and seasonal changes. The research also offers category-specific forecasts, therefore stressing variations in the seasonal and temporal trends of theft from and of vehicles.
+Analyzing and projecting monthly crime counts for theft from vehicles and theft of vehicles in Calgary is the main aim of this study. I created a Bayesian regression model to assess the effects of time (year and month) and crime category on reported crime counts using historical data spanning January 2018 through October 2024. Offering a Thorough knowledge of how vehicle-related crimes have developed and may continue to alter in the near future, the model catches both long-term patterns and seasonal changes. The research also provides category-specific forecasts, therefore stressing variations in the seasonal and temporal trends of theft from and of vehicles.
 
-The analysis reveals a continued decline in vehicle-related crimes in Calgary, with a mean change of -60.5 each year, and notable mean differences of -454.8 between the two categories. Theft from vehicles is anticipated to show cyclical surges in the summer months, indicating possible opportunistic habits. Conversely, vehicle theft exhibits a more stable decline throughout the course of the year. The data indicate that, although overall vehicle-related crimes are down, seasonal surges in certain categories persist as a problem for policymakers and law enforcement to tackle, for example, the crime count of Theft From Vehicle in August is expected larger than January by 159.4. Details are in @sec-result.
+The analysis discloses a continued decline in vehicle-related crimes in Calgary, with a mean change of -60.5 each year, and notable mean differences of -454.8 between the two categories. Theft from vehicles is anticipated to show cyclical surges in the summer months, indicating possible opportunistic habits. Conversely, vehicle theft exhibits a more stable decline throughout the course of the year. The data indicate that, although overall vehicle-related crimes are down, seasonal surges in certain categories persist as a problem for policymakers and law enforcement to tackle, for example, the crime count of Theft From Vehicle in August is expected larger than January by 159.4. Details are in @sec-result.
 
-The study is significant for its role in proactive crime prevention and resource optimization. This study offers precise and comprehensible forecasts, providing policymakers and law enforcement with evidence-based insights to inform decision-making. This study addresses a significant research gap and enhances public safety in Calgary.
+The study is significant for its role in proactive crime prevention and resource optimization. This study provides precise and comprehensible forecasts, providing policymakers and law enforcement with evidence-based perception to inform decision-making. This study addresses a significant research shortfall and enhances public safety in Calgary.
 
 The remainder of this paper is structured as follows: @sec-data provides an overview of the data. @sec-model provides the modeling approach. @sec-result present the results and discuss the implications, limitations.  @sec-discussion.
 
@@ -59,7 +59,7 @@ Crime count quantifies the number of reported incidents of a specific crime and 
 
 There are limitations in these measurement. Reporting Bias: Not all crimes are reported. Minor incidents or those involving uninsured vehicles may go unreported, leading to underestimation of true crime rates. Cumulative Nature: The inclusion of late-reported incidents makes it challenging to distinguish between crimes that occurred during the reported month versus those that occurred earlier.
 
-By understanding how this dataset measures real-world crime phenomena, we can more confidently interpret the insights and predictions derived from it.
+By understanding how this dataset measures real-world crime phenomena, we can more confidently interpret the perceptionand predictions derived from it.
 
 ## Data Examination {#sec-dataexam}
 
@@ -100,7 +100,7 @@ The first 6 rows of the cleaned dataset are shown in @tbl-cleaned-data.
 
 ```{r}
 #| label: tbl-cleaned-data
-#| tbl-cap: Head of cleaned Calgary Crime data 
+#| tbl-cap: Column Names and First 6 Rows of cleaned Calgary Crime data 
 #| echo: false
 #| warning: false
 
@@ -138,17 +138,17 @@ kable(cleaned_data %>% filter(category == "Theft OF Vehicle") %>% select(crime_c
 ```
 
 
-The response variable, crime_count, for Theft OF Vehicle incidents reflects the monthly reported counts of vehicles being stolen in Calgary. The dataset's summary statistics indicate that the crime counts range from a minimum of 146 to a maximum of 651 incidents. The median count is 424.5, suggesting that half of the months have fewer than 425 thefts, while the other half exceed this value. Interestingly, the mean crime count is 422.5, closely aligned with the median, suggesting a relatively symmetric distribution of the data. The interquartile range (IQR) spans from 361.2 (1st quartile) to 469.0 (3rd quartile), indicating that most monthly counts are concentrated within this range. These figures highlight the scale and regularity of vehicle theft in Calgary and form an essential basis for analyzing and forecasting trends in such crimes.
+The response variable, crime_count, for Theft OF Vehicle incidents reflects the monthly reported counts of vehicles being stolen in Calgary. The dataset's summary statistics indicate that the crime counts range from a minimum of 146 to a maximum of 651 incidents. The median count is 424.5, suggesting that half of the months have fewer than 425 thefts, while the other half exceed this value. Interestingly, the mean crime count is 422.5, closely aligned with the median, suggesting a relatively symmetric distribution of the data. The interquartile range (IQR) spans from 361.2 (1st quantile) to 469.0 (3rd quantile), indicating that most monthly counts are concentrated within this range. These figures highlight the scale and regularity of vehicle theft in Calgary and form an essential basis for analyzing and forecasting trends in such crimes.
 
 ## Predictor Variable
 
 ### year
 
-The variable year represents the timeline over which the crime data is recorded, providing insight into how vehicle-related crime counts have changed annually. By analyzing the data across different years, we can observe any long-term trends, such as consistent increases, decreases, or fluctuations in vehicle thefts. This variable helps us understand whether certain years experienced higher crime rates due to factors like economic conditions, population changes, or other external influences.
+The variable year represents the timeline over which the crime data is recorded, providing perception into how vehicle-related crime counts have changed annually. By analyzing the data across different years, we can observe any long-term trends, such as consistent increases, decreases, or fluctuations in vehicle thefts. This variable helps us understand whether certain years experienced higher crime rates due to factors like economic conditions, population changes, or other external influences.
 
 ### month and category
 
-The variables month and category provide a detailed view of how vehicle-related crimes are distributed across time and crime types. Month captures seasonal variations, showing how crime rates fluctuate throughout the year. For example, there might be a tendency for higher crime counts during certain seasons, such as summer or winter, influenced by weather conditions or holiday activities. Category distinguishes between "Theft FROM Vehicle" and "Theft OF Vehicle," allowing us to compare the frequency and patterns of these two crime types. Together, these variables highlight differences in the nature and timing of vehicle-related crimes, offering valuable insights into their temporal and categorical distributions.
+The variables month and category provide a detailed view of how vehicle-related crimes are distributed across time and crime types. Month captures seasonal variations, showing how crime rates fluctuate throughout the year. For example, there might be a tendency for higher crime counts during certain seasons, such as summer or winter, influenced by weather conditions or holiday activities. Category distinguishes between "Theft FROM Vehicle" and "Theft OF Vehicle," allowing us to compare the frequency and patterns of these two crime types. Together, these variables highlight differences in the nature and timing of vehicle-related crimes, offering useful perception into their temporal and categorical distributions.
 
 ## Trend of The Two Crime
 
@@ -156,7 +156,7 @@ The trend of Theft FROM Vehicle and Theft OF Vehicle are shown in @fig-combined-
 
 ```{r}
 #| label: fig-combined-trend
-#| fig-cap: Monthly trend of Theft FROM Vehicle and Theft OF Vehicle
+#| fig-cap: Monthly trend of Crime Count of Theft FROM Vehicle and Theft OF Vehicle Combined
 #| echo: false
 #| warning: false
 # Plot combined trends
@@ -176,7 +176,7 @@ The trends for "Theft FROM Vehicle" and "Theft OF Vehicle" reveal distinct patte
 
 # Model {#sec-model}
 
-The Bayesian regression model was developed to analyze and forecast the trends of vehicle-related crimes in Calgary, focusing on the categories "Theft FROM Vehicle" and "Theft OF Vehicle." The primary goal of this modeling is to understand the relationship between crime counts and key predictors such as time (year and month) and crime categories, as well as their interactions. By incorporating temporal and categorical variables, the model seeks to capture long-term trends, seasonal patterns, and differences between the two types of crimes. Ultimately, the model provides a foundation for projecting future crime rates, offering valuable insights that can support strategic decision-making and the development of targeted crime prevention initiatives for 2025 and beyond.
+The Bayesian regression model was developed to analyze and forecast the trends of vehicle-related crimes in Calgary, focusing on the categories "Theft FROM Vehicle" and "Theft OF Vehicle." The primary goal of this modeling is to understand the relationship between crime counts and key predictors such as time (year and month) and crime categories, as well as their interactions. By incorporating temporal and categorical variables, the model seeks to capture long-term trends, seasonal patterns, and differences between the two types of crimes. Ultimately, the model provides a foundation for projecting future crime rates, offering useful perceptionthat can support strategic decision-making and the development of targeted crime prevention initiatives for 2025 and beyond.
 
 Background details and diagnostics are included in Appendix @sec-model-detail.
 
@@ -206,7 +206,7 @@ Relationship to Crime Counts: Crime counts for both categories ("Theft FROM Vehi
 
 ```{r}
 #| label: fig-year-trend
-#| tbl-cap: Yearly trend of Theft FROM Vehicle and Theft OF Vehicle
+#| tbl-cap: Yearly Trend of Crime Count of Theft FROM Vehicle and Theft OF Vehicle Combined
 #| echo: false
 #| warning: false
 
@@ -231,7 +231,7 @@ Relationship to Crime Counts: Monthly crime counts display seasonal patterns, wi
 
 ### category (Categorical Predictor)
 
-The category variable differentiates between "Theft FROM Vehicle" and "Theft OF Vehicle," two distinct types of crimes with different characteristics and frequencies. This variable is crucial for explaining the variation in crime counts, as the two categories exhibit different trends over time and across months.
+The category variable differentiates between "Theft FROM Vehicle" and "Theft OF Vehicle," two distinct types of crimes with different characteristics and frequencies. This variable is essential for explaining the variation in crime counts, as the two categories exhibit different trends over time and across months.
 
 Relationship to Crime Counts: "Theft FROM Vehicle" has consistently higher crime counts than "Theft OF Vehicle." Additionally, the trends for these categories vary significantly over time and seasons, as seen in prior visualizations. By including category as a predictor, the model can capture these differences and provide more accurate predictions.
 
@@ -273,11 +273,11 @@ Theft OF Vehicle: This category exhibits a more consistent decline in crime coun
 
 ## Regression Model Estimates
 
-The regression model estimates, summarized in the @tbl-model-summary below, provide insight into how predictors such as year, month, and category influence vehicle-related crime counts in Calgary. The table includes coefficient estimates and their standard deviation to quantify the effect sizes and uncertainties associated with each predictor.
+The regression model estimates, summarized in the @tbl-model-summary below, provide perception into how predictors such as year, month, and category influence vehicle-related crime counts in Calgary. The table includes coefficient estimates and their standard deviation to quantify the effect sizes and uncertainties associated with each predictor.
 
 ```{r}
 #| label: tbl-model-summary
-#| tbl-cap: Regression Estimates for Crime Counts
+#| tbl-cap: Regression Estimates of Coefficients and Standard Deviation for Crime Counts
 #| echo: false
 #| warning: false
 library(modelsummary)
@@ -328,13 +328,13 @@ The model's results indicate that both types of vehicle-related crimes in Calgar
 
 These findings suggest that crime prevention strategies targeting vehicle-related crimes have been effective and should continue to focus on mitigating seasonal spikes and addressing high-crime months.
 
-The Bayesian regression model provides strong evidence for declining trends in vehicle-related crimes in Calgary. By 2025, both categories are projected to experience reduced crime rates, with "Theft FROM Vehicle" showing a significant decrease in seasonal peaks and overall counts. These results offer valuable insights for law enforcement and policymakers, supporting the development of targeted strategies to maintain and accelerate these positive trends.
+The Bayesian regression model provides strong evidence for declining trends in vehicle-related crimes in Calgary. By 2025, both categories are projected to experience reduced crime rates, with "Theft FROM Vehicle" showing a significant decrease in seasonal peaks and overall counts. These results offer useful Perception for law enforcement and policymakers, supporting the development of targeted strategies to maintain and accelerate these positive trends.
 
 # Discussion {#sec-discussion}
 
 ## What Is Done in This Paper?
 
-This paper investigates the trends and forecasts of vehicle-related crimes in Calgary, specifically focusing on the categories Theft FROM Vehicle and Theft OF Vehicle. Using historical data from 2018 to 2024 and a Bayesian regression model, the analysis identifies long-term trends, seasonal patterns, and differences between the two categories of crime. The model incorporates key predictors such as year, month, category, and their interactions to capture both temporal and categorical variations. The paper also provides forecasts for 2025, offering valuable insights into the expected future trends of these crimes.
+This paper investigates the trends and forecasts of vehicle-related crimes in Calgary, specifically focusing on the categories Theft FROM Vehicle and Theft OF Vehicle. Using historical data from 2018 to 2024 and a Bayesian regression model, the analysis identifies long-term trends, seasonal patterns, and differences between the two categories of crime. The model incorporates key predictors such as year, month, category, and their interactions to capture both temporal and categorical variations. The paper also provides forecasts for 2025, offering useful Perception into the expected future trends of these crimes.
 
 ## What Is Something That We Learn About the World?
 
@@ -342,15 +342,15 @@ One key finding from this study is the consistent decline in vehicle-related cri
 
 ## What Is Another Thing That We Learn About the World?
 
-Another important insight is the fundamental difference between the two crime categories. Theft FROM Vehicle is significantly more frequent than Theft OF Vehicle, and its seasonal variability is more pronounced. This suggests that theft from vehicles is opportunistic and influenced by environmental factors, whereas vehicle theft itself may be less seasonal and potentially driven by different motives, such as organized crime or professional theft rings. These differences imply that crime prevention strategies should be tailored to the specific characteristics of each category.
+Another important perception is the fundamental difference between the two crime categories. Theft FROM Vehicle is significantly more frequent than Theft OF Vehicle, and its seasonal variability is more pronounced. This suggests that theft from vehicles is opportunistic and influenced by environmental factors, whereas vehicle theft itself may be less seasonal and potentially driven by different motives, such as organized crime or professional theft rings. These differences imply that crime prevention strategies should be tailored to the specific characteristics of each category.
 
 ## Evaluating Policy Interventions
 
-A critical question arising from this research is how effective existing policy interventions have been in reducing vehicle-related crimes. While the model identifies a downward trend in both crime categories, it does not directly link these trends to specific policies, such as enhanced policing, public awareness campaigns, or technological improvements like vehicle immobilizers. Future research could assess the causal relationship between these interventions and crime reduction by incorporating data on policy implementation dates and intensity. For example, how did increased police patrols in high-crime areas or the introduction of anti-theft programs impact specific crime patterns? Addressing this question would provide a clearer understanding of which strategies work best and how they can be optimized.
+A essential question arising from this research is how effective existing policy interventions have been in reducing vehicle-related crimes. While the model identifies a downward trend in both crime categories, it does not directly link these trends to specific policies, such as enhanced policing, public awareness campaigns, or technological improvements like vehicle immobilizers. Future research could assess the causal relationship between these interventions and crime reduction by incorporating data on policy implementation dates and intensity. For example, how did increased police patrols in high-crime areas or the introduction of anti-theft programs impact specific crime patterns? Addressing this question would provide a clearer understanding of which strategies work best and how they can be optimized.
 
 ## What Are Some Weaknesses of What Was Done?
 
-While the analysis provides valuable insights, it is not without limitations:
+While the analysis provides useful perception, it is not without limitations:
 
 - Data Limitations: The study relies on historical data, which may not fully capture all relevant factors influencing crime trends. For example, socioeconomic conditions, population density, or enforcement policies are not explicitly included as predictors in the model.
 
@@ -378,7 +378,7 @@ Residuals @fig-residual-plot represent the differences between observed and pred
 
 ```{r}
 #| label: fig-residual-plot
-#| fig-cap: Residual again fitted plot
+#| fig-cap: Residual against fitted plot
 #| echo: false
 #| warning: false
 
@@ -431,7 +431,7 @@ The observed data aligns closely with the predictive distributions, indicating t
 
 ## Overview
 
-The current Calgary crime dataset, while robust in capturing reported crimes, lacks contextual and unreported crime data that could enrich analyses. An idealized methodology involves supplementing this dataset with survey-based data collection to gather information about unreported crimes, public perceptions of safety, and crime-related behaviors. This approach bridges gaps in observational data and offers a more comprehensive view of crime dynamics in Calgary.
+The current Calgary crime dataset, while robust in capturing reported crimes, lacks contextual and unreported crime data that could enrich analyses. An idealized methodology involves supplementing this dataset with survey-based data collection to gather information about unreported crimes, public perceptions of safety, and crime-related behaviors. 
 
 Key goals of this methodology include:
 
@@ -439,7 +439,7 @@ Key goals of this methodology include:
 
 - Understanding the demographic and socioeconomic contexts of crime victims.
  
-- Providing actionable insights for law enforcement and policymakers.
+- Providing actionable perception for law enforcement and policymakers.
 
 ## Sampling Approach
 
@@ -495,7 +495,7 @@ Filtering Out Biases:
 
 Handling Missing or Ambiguous Data:
 
-- Missing responses are minimized through mandatory fields for critical questions.
+- Missing responses are minimized through mandatory fields for essential questions.
 Ambiguous responses are flagged for follow-up where feasible.
 
 ## Survey Structure
@@ -507,7 +507,7 @@ Crime Experience: Details about reported and unreported crimes, including the ty
 
 - Perceptions of Safety: Questions on how safe respondents feel in their neighborhood and during specific times of the day.
 
-- Behavioral Insights: Questions on precautions taken to avoid crime (e.g., locking vehicles, using anti-theft devices).
+- Behavioral Perception: Questions on precautions taken to avoid crime (e.g., locking vehicles, using anti-theft devices).
 
 Question Types:
 
@@ -515,7 +515,7 @@ Question Types:
 
 - Likert Scales: To measure perceptions of safety and trust in law enforcement.
 
-- Open-Ended Questions: To allow respondents to share additional insights.
+- Open-Ended Questions: To allow respondents to share additional perception.
 
 Length and Accessibility:
 
