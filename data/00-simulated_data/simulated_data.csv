@@ -1,101 +1,101 @@
-Community,Category,Crime.Count,Year,Month
-03D,Assault (Non-domestic),4,2021,2
-03D,Theft,2,2019,1
-03D,Assault (Non-domestic),1,2021,4
-02C,Assault (Non-domestic),2,2022,11
-03D,Break & Enter - Residential,4,2020,9
-02C,Theft,5,2019,5
-02C,Assault (Non-domestic),1,2019,11
-02C,Break & Enter - Residential,1,2021,12
-03D,Vandalism,1,2022,8
-01B,Break & Enter - Residential,5,2020,2
-04E,Break & Enter - Commercial,3,2021,5
-02C,Vandalism,1,2020,2
-02C,Vandalism,2,2019,6
-01B,Break & Enter - Residential,2,2020,10
-02C,Break & Enter - Commercial,1,2021,10
-03D,Break & Enter - Commercial,2,2020,9
-04E,Break & Enter - Commercial,1,2021,11
-01B,Theft,5,2021,7
-03D,Break & Enter - Commercial,2,2019,6
-03D,Break & Enter - Commercial,3,2020,12
-01B,Theft,5,2022,3
-04E,Theft,4,2019,11
-01B,Assault (Non-domestic),5,2020,8
-01B,Break & Enter - Residential,2,2020,11
-01B,Break & Enter - Residential,1,2022,7
-03D,Assault (Non-domestic),4,2020,4
-04E,Break & Enter - Residential,2,2022,8
-02C,Vandalism,5,2020,12
-03D,Break & Enter - Commercial,1,2019,3
-02C,Break & Enter - Residential,5,2022,8
-01B,Break & Enter - Commercial,1,2020,6
-02C,Vandalism,4,2022,4
-03D,Vandalism,3,2019,7
-04E,Break & Enter - Residential,1,2022,10
-02C,Theft,1,2020,11
-01B,Theft,2,2019,8
-03D,Theft,4,2022,4
-03D,Vandalism,2,2022,10
-01B,Break & Enter - Residential,1,2021,9
-04E,Assault (Non-domestic),5,2020,6
-03D,Break & Enter - Commercial,5,2019,3
-04E,Assault (Non-domestic),1,2021,4
-02C,Break & Enter - Commercial,1,2020,9
-01B,Vandalism,5,2022,9
-03D,Break & Enter - Residential,5,2021,4
-01B,Theft,2,2020,4
-01B,Theft,2,2021,6
-02C,Assault (Non-domestic),5,2021,5
-03D,Theft,1,2019,1
-03D,Assault (Non-domestic),1,2022,8
-04E,Break & Enter - Residential,5,2020,7
-01B,Theft,5,2021,12
-03D,Break & Enter - Residential,4,2019,5
-01B,Vandalism,5,2019,6
-03D,Theft,5,2021,3
-04E,Theft,4,2020,8
-02C,Theft,2,2021,10
-01B,Assault (Non-domestic),5,2020,5
-02C,Break & Enter - Commercial,1,2020,7
-01B,Break & Enter - Residential,1,2020,4
-01B,Theft,2,2022,12
-04E,Break & Enter - Residential,1,2019,9
-04E,Assault (Non-domestic),2,2022,11
-03D,Vandalism,5,2020,11
-01B,Vandalism,1,2019,3
-02C,Break & Enter - Commercial,3,2022,10
-01B,Break & Enter - Residential,2,2022,7
-01B,Vandalism,2,2019,2
-03D,Assault (Non-domestic),5,2022,9
-01B,Theft,4,2019,6
-02C,Break & Enter - Commercial,1,2022,4
-01B,Theft,5,2020,6
-03D,Vandalism,2,2020,2
-01B,Vandalism,5,2022,2
-03D,Vandalism,2,2021,8
-02C,Vandalism,2,2021,8
-04E,Assault (Non-domestic),4,2019,11
-03D,Break & Enter - Commercial,3,2020,5
-04E,Assault (Non-domestic),4,2022,9
-04E,Break & Enter - Commercial,3,2022,7
-02C,Vandalism,3,2020,3
-02C,Vandalism,3,2021,7
-03D,Assault (Non-domestic),5,2021,8
-04E,Break & Enter - Commercial,3,2021,11
-02C,Vandalism,2,2021,10
-02C,Theft,3,2020,5
-03D,Break & Enter - Commercial,1,2019,1
-03D,Break & Enter - Commercial,5,2022,7
-04E,Break & Enter - Residential,1,2019,6
-01B,Assault (Non-domestic),4,2022,8
-02C,Assault (Non-domestic),2,2021,4
-02C,Vandalism,2,2022,6
-01B,Vandalism,4,2022,12
-02C,Break & Enter - Residential,1,2022,1
-04E,Break & Enter - Commercial,4,2019,3
-01B,Vandalism,5,2020,12
-01B,Vandalism,5,2020,4
-02C,Break & Enter - Residential,3,2022,1
-03D,Break & Enter - Residential,5,2022,5
-03D,Assault (Non-domestic),5,2021,11
+community,year,month,category,crime_count
+03D,2019,4,Theft,4
+03D,2022,9,Theft,7
+03D,2020,8,Theft,7
+02C,2019,6,Break & Enter - Commercial,5
+03D,2022,11,Theft,7
+02C,2020,4,Break & Enter - Commercial,4
+02C,2019,8,Break & Enter - Commercial,5
+02C,2021,3,Break & Enter - Commercial,5
+03D,2021,4,Theft,6
+01B,2022,4,Assault (Non-domestic),5
+04E,2022,12,Vandalism,5
+02C,2020,6,Break & Enter - Commercial,6
+02C,2022,1,Break & Enter - Commercial,6
+01B,2021,10,Assault (Non-domestic),4
+02C,2019,11,Break & Enter - Commercial,3
+03D,2020,4,Theft,5
+04E,2020,11,Vandalism,3
+01B,2022,9,Assault (Non-domestic),5
+03D,2021,7,Theft,8
+03D,2020,8,Theft,7
+01B,2019,5,Assault (Non-domestic),2
+04E,2022,2,Vandalism,5
+01B,2021,11,Assault (Non-domestic),4
+01B,2021,6,Assault (Non-domestic),6
+01B,2021,9,Assault (Non-domestic),4
+03D,2020,8,Theft,7
+04E,2020,12,Vandalism,3
+02C,2021,10,Break & Enter - Commercial,5
+03D,2019,4,Theft,4
+02C,2019,5,Break & Enter - Commercial,3
+01B,2022,7,Assault (Non-domestic),7
+02C,2021,1,Break & Enter - Commercial,5
+03D,2020,8,Theft,7
+04E,2020,8,Vandalism,5
+02C,2020,10,Break & Enter - Commercial,4
+01B,2022,9,Assault (Non-domestic),5
+03D,2020,8,Theft,7
+03D,2020,2,Theft,5
+01B,2020,5,Assault (Non-domestic),3
+04E,2021,9,Vandalism,4
+03D,2022,7,Theft,9
+04E,2022,7,Vandalism,7
+02C,2020,10,Break & Enter - Commercial,4
+01B,2019,12,Assault (Non-domestic),2
+03D,2020,10,Theft,5
+01B,2020,8,Assault (Non-domestic),5
+01B,2020,6,Assault (Non-domestic),5
+02C,2021,7,Break & Enter - Commercial,7
+03D,2022,10,Theft,7
+03D,2020,11,Theft,5
+04E,2021,1,Vandalism,4
+01B,2020,9,Assault (Non-domestic),3
+03D,2021,3,Theft,6
+01B,2022,10,Assault (Non-domestic),5
+03D,2019,5,Theft,4
+04E,2021,6,Vandalism,6
+02C,2021,11,Break & Enter - Commercial,5
+01B,2021,11,Assault (Non-domestic),4
+02C,2019,9,Break & Enter - Commercial,3
+01B,2021,4,Assault (Non-domestic),4
+01B,2021,10,Assault (Non-domestic),4
+04E,2020,7,Vandalism,5
+04E,2020,9,Vandalism,3
+03D,2020,7,Theft,7
+01B,2021,10,Assault (Non-domestic),4
+02C,2022,4,Break & Enter - Commercial,6
+01B,2021,8,Assault (Non-domestic),6
+01B,2021,9,Assault (Non-domestic),4
+03D,2020,9,Theft,5
+01B,2019,9,Assault (Non-domestic),2
+02C,2020,5,Break & Enter - Commercial,4
+01B,2022,7,Assault (Non-domestic),7
+03D,2022,6,Theft,9
+01B,2022,11,Assault (Non-domestic),5
+03D,2019,1,Theft,4
+02C,2021,10,Break & Enter - Commercial,5
+04E,2021,10,Vandalism,4
+03D,2022,1,Theft,7
+04E,2022,10,Vandalism,5
+04E,2020,1,Vandalism,3
+02C,2022,10,Break & Enter - Commercial,6
+02C,2019,11,Break & Enter - Commercial,3
+03D,2021,5,Theft,6
+04E,2019,7,Vandalism,4
+02C,2021,12,Break & Enter - Commercial,5
+02C,2020,5,Break & Enter - Commercial,4
+03D,2020,10,Theft,5
+03D,2019,9,Theft,4
+04E,2021,4,Vandalism,4
+01B,2020,6,Assault (Non-domestic),5
+02C,2022,2,Break & Enter - Commercial,6
+02C,2019,1,Break & Enter - Commercial,3
+01B,2021,5,Assault (Non-domestic),4
+02C,2022,9,Break & Enter - Commercial,6
+04E,2022,4,Vandalism,5
+01B,2021,3,Assault (Non-domestic),4
+01B,2021,9,Assault (Non-domestic),4
+02C,2022,1,Break & Enter - Commercial,6
+03D,2019,2,Theft,4
+03D,2022,4,Theft,7

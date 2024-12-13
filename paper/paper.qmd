@@ -67,7 +67,7 @@ The raw data from Open Data has five columns and 75,595 rows, the column names a
 
 ```{r}
 #| label: tbl-raw
-#| tbl-cap: Column Names of Raw Data
+#| tbl-cap: Column Names of Raw Data and first 6 rows of raw data
 #| echo: false
 #| warning: false
 
@@ -156,14 +156,13 @@ The trend of Theft FROM Vehicle and Theft OF Vehicle are shown in @fig-combined-
 
 ```{r}
 #| label: fig-combined-trend
-#| fig-cap: Trend of The Two Crime Combined
+#| fig-cap: Monthly trend of Theft FROM Vehicle and Theft OF Vehicle
 #| echo: false
 #| warning: false
 # Plot combined trends
 ggplot(cleaned_data, aes(x = time, y = crime_count, color = category)) +
   geom_line() +
   labs(
-    title = "Trend of Theft FROM Vehicle and Theft OF Vehicle",
     x = "Time",
     y = "Crime Count",
     color = "Category"
@@ -207,7 +206,7 @@ Relationship to Crime Counts: Crime counts for both categories ("Theft FROM Vehi
 
 ```{r}
 #| label: fig-year-trend
-#| tbl-cap: Trend of Crime Counts Over Years
+#| tbl-cap: Yearly trend of Theft FROM Vehicle and Theft OF Vehicle
 #| echo: false
 #| warning: false
 
@@ -216,7 +215,6 @@ ggplot(cleaned_data, aes(x = year, y = crime_count, color = category)) +
   geom_point(alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
   labs(
-    title = "Trend of Crime Counts Over Years",
     x = "Year",
     y = "Crime Count",
     color = "Category"
@@ -255,13 +253,12 @@ The actual and fitted crime trends for both categories from 2018 to 2025 are sho
 
 ```{r}
 #| label: fig-forcast-trend
-#| fig-cap: Actual vs. Fitted Crime Trends (2018-2025)
+#| fig-cap: Comparison of actual crime count of Theft OF Vehicle and Theft FROM Vehicle and Fitted value
 #| echo: false
 #| warning: false
 ggplot(fitted_data, aes(x = time, y = crime_count, color = category, linetype = source)) +
   geom_line() +
   labs(
-    title = "Actual vs. Fitted Crime Trends (2018-2025)",
     x = "Time",
     y = "Crime Count",
     color = "Category",
@@ -381,7 +378,7 @@ Residuals @fig-residual-plot represent the differences between observed and pred
 
 ```{r}
 #| label: fig-residual-plot
-#| fig-cap: Residual Plot
+#| fig-cap: Residual again fitted plot
 #| echo: false
 #| warning: false
 
